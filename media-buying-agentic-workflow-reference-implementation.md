@@ -23,8 +23,10 @@ This case study explains the functional product, its technical design, the
 control plane implemented around the agents, and how the prototype could evolve
 into an enterprise MarTech capability.
 
-**Working source implementation:**
-[neeleshkalani/Media](https://github.com/neeleshkalani/Media)
+**Source availability:** The working prototype is maintained in a private
+repository. Source access can be made available on request. This public
+reference documents the functional workflow, technical architecture,
+control-plane implementation, evaluation approach, and enterprise target state.
 
 ## Contents
 
@@ -576,29 +578,29 @@ system.
 
 ## 11. Repository Guide
 
-The executable prototype is maintained in the
-[Media source repository](https://github.com/neeleshkalani/Media). This
-reference document and its diagrams are published here so the architecture and
-control-plane patterns can be considered alongside other enterprise agentic
-workflow examples.
+The executable prototype is maintained in a private repository and can be made
+available on request. The file map below shows how the implementation is
+organized. This reference document and its diagrams are published here so the
+architecture and control-plane patterns can be considered alongside other
+enterprise agentic workflow examples.
 
 | Area | Location |
 |---|---|
-| Streamlit product experience | [`app.py`](https://github.com/neeleshkalani/Media/blob/main/app.py) |
-| Specialist agent functions and prompts | [`agents/`](https://github.com/neeleshkalani/Media/tree/main/agents) |
-| Workflow orchestration and policy | [`services/`](https://github.com/neeleshkalani/Media/tree/main/services) |
-| Model provider and telemetry | [`services/llm.py`](https://github.com/neeleshkalani/Media/blob/main/services/llm.py) |
-| Deterministic evaluations | [`services/evaluation.py`](https://github.com/neeleshkalani/Media/blob/main/services/evaluation.py) |
-| Pydantic domain contracts | [`models/domain.py`](https://github.com/neeleshkalani/Media/blob/main/models/domain.py) |
-| SQLAlchemy persistence | [`db/`](https://github.com/neeleshkalani/Media/tree/main/db) |
-| MCP client and mock connectors | [`connectors/`](https://github.com/neeleshkalani/Media/tree/main/connectors) |
-| Local LinkedIn Ads MCP simulator | [`mcp_servers/linkedin_ads.py`](https://github.com/neeleshkalani/Media/blob/main/mcp_servers/linkedin_ads.py) |
-| Automated tests | [`tests/`](https://github.com/neeleshkalani/Media/tree/main/tests) |
-| Detailed control-plane implementation | [`CONTROL_PLANE_IMPLEMENTATION.md`](https://github.com/neeleshkalani/Media/blob/main/docs/CONTROL_PLANE_IMPLEMENTATION.md) |
-| Current and production data flows | [`END_TO_END_FLOWS.md`](https://github.com/neeleshkalani/Media/blob/main/docs/END_TO_END_FLOWS.md) |
-| Run and test instructions | [`RUN_AND_TEST.md`](https://github.com/neeleshkalani/Media/blob/main/docs/RUN_AND_TEST.md) |
+| Streamlit product experience | `app.py` |
+| Specialist agent functions and prompts | `agents/` |
+| Workflow orchestration and policy | `services/` |
+| Model provider and telemetry | `services/llm.py` |
+| Deterministic evaluations | `services/evaluation.py` |
+| Pydantic domain contracts | `models/domain.py` |
+| SQLAlchemy persistence | `db/` |
+| MCP client and mock connectors | `connectors/` |
+| Local LinkedIn Ads MCP simulator | `mcp_servers/linkedin_ads.py` |
+| Automated tests | `tests/` |
+| Detailed control-plane implementation | `docs/CONTROL_PLANE_IMPLEMENTATION.md` |
+| Current and production data flows | `docs/END_TO_END_FLOWS.md` |
+| Run and test instructions | `docs/RUN_AND_TEST.md` |
 
-After cloning the Media source repository, run locally on Windows with:
+With source access, run locally on Windows with:
 
 ```powershell
 .\run_app.cmd
