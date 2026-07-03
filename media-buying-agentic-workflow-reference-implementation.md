@@ -26,6 +26,22 @@ into an enterprise MarTech capability.
 **Working source implementation:**
 [neeleshkalani/Media](https://github.com/neeleshkalani/Media)
 
+## Contents
+
+- [Executive Summary](#executive-summary)
+- [1. The MarTech Problem](#1-the-martech-problem)
+- [2. Functional Flow](#2-functional-flow)
+- [3. Technical Architecture](#3-technical-architecture)
+- [4. Why The Control Plane Matters](#4-why-the-control-plane-matters)
+- [5. Evaluation: What Is Measured Today](#5-evaluation-what-is-measured-today)
+- [6. Implemented, Live, And Simulated Boundaries](#6-implemented-live-and-simulated-boundaries)
+- [7. Enterprise Target State](#7-enterprise-target-state)
+- [8. Enterprise Value](#8-enterprise-value)
+- [9. Key Design Decisions](#9-key-design-decisions)
+- [10. Demonstration Path](#10-demonstration-path)
+- [11. Repository Guide](#11-repository-guide)
+- [Closing Perspective](#closing-perspective)
+
 ---
 
 ## Executive Summary
