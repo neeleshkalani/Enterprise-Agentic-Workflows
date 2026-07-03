@@ -1,17 +1,38 @@
 # Enterprise Agentic Workflows
 
-Reference implementations and design patterns for governed enterprise agentic
-workflows.
+This repository shares reference implementations for enterprise agentic workflows with orchestration, evaluation, governance, observability, and human-in-the-loop controls.
 
-## Media Buying
+These implementations explore how agentic workflows can be designed for enterprise use cases by combining functional workflow design, technical architecture, control-plane concepts, and operational guardrails.
 
-[Media Buying Agentic Workflow Reference Implementation](Media%20Buying%20Agentic%20Workflow%20Reference%20Implementation.md)
+## Focus Areas
 
-This case study follows an agent-assisted media-buying workflow from campaign
-brief through strategy, planning, simulated platform activation, optimization,
-and reporting. It explains the functional flow, technical architecture,
-implemented AI control plane, evaluation approach, current boundaries, and
-enterprise target state.
+- Functional workflow overview
+- Technical architecture overview
+- Agent orchestration
+- Workflow state management
+- Evaluation and governance
+- Human-in-the-loop approvals
+- Observability across agent decisions, workflow steps, and execution outcomes
+- Control-plane concepts for governing safe, auditable, and policy-aligned agentic workflows
 
-The executable prototype is maintained in
-[neeleshkalani/Media](https://github.com/neeleshkalani/Media).
+## Reference Implementations
+
+- [Media Buying Agentic Workflow Reference Implementation](./media-buying-agentic-workflow-reference-implementation.md)
+
+## Why This Repository
+
+Agentic AI workflows are moving beyond simple prompt-response interactions. In enterprise environments, agents need to operate within defined workflows, business rules, approval paths, governance boundaries, and evaluation mechanisms.
+
+This repository focuses on patterns that help make agentic workflows more practical for enterprise adoption, including:
+
+- Clear workflow decomposition
+- Role-based agent responsibilities
+- Human-in-the-loop checkpoints
+- Evaluation-driven execution
+- Workflow state tracking
+- Governance and auditability
+- Observability across agent actions and outcomes
+
+## Current Status
+
+This repository is evolving and currently includes early reference implementation notes. Additional workflows, architecture details, and implementation patterns will be added over time.
