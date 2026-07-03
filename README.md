@@ -21,17 +21,14 @@ These implementations explore how agentic workflows can be designed for enterpri
 
 ## Why This Repository
 
-Agentic AI workflows are moving beyond simple prompt-response interactions. In enterprise environments, agents need to operate within defined workflows, business rules, approval paths, governance boundaries, and evaluation mechanisms.
+Agentic AI workflows are moving beyond prompt-response interactions. In
+enterprise environments, generating a good response is not enough. Agents must
+operate within explicit business processes, decision rights, approval paths,
+policy boundaries, and measurable quality controls.
 
-This repository focuses on patterns that help make agentic workflows more practical for enterprise adoption, including:
-
-- Clear workflow decomposition
-- Role-based agent responsibilities
-- Human-in-the-loop checkpoints
-- Evaluation-driven execution
-- Workflow state tracking
-- Governance and auditability
-- Observability across agent actions and outcomes
+This repository explores the engineering and operating-model patterns required
+to move from capable agents to workflows that are governable, observable,
+auditable, and suitable for enterprise adoption.
 
 ## Current Status
 
