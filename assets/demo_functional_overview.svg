@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+  <title id="title">Functional Flow: Media Buyer Workbench</title>
+  <desc id="desc">Left-to-right functional swimlane diagram with an AI agent row and human control row, including simulated MCP execution.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 38px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 21px Arial, sans-serif; fill: #475569; }
+      .laneAgent { fill: #ede9fe; stroke: #7c3aed; stroke-width: 3; rx: 26; }
+      .laneHuman { fill: #dcfce7; stroke: #059669; stroke-width: 3; rx: 26; }
+      .box { fill: #ffffff; stroke-width: 2; rx: 18; }
+      .agent { stroke: #7c3aed; }
+      .human { stroke: #059669; }
+      .mcp { fill: #fff7ed; stroke: #ea580c; stroke-width: 2; rx: 18; }
+      .laneTitle { font: 700 32px Arial, sans-serif; fill: #111827; }
+      .label { font: 700 16px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 14px Arial, sans-serif; fill: #475569; }
+      .num { font: 700 17px Arial, sans-serif; fill: #ffffff; }
+      .badgeAgent { fill: #7c3aed; }
+      .badgeHuman { fill: #059669; }
+      .badgeMcp { fill: #ea580c; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .note { font: 700 18px Arial, sans-serif; fill: #334155; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="810" />
+
+  <text class="title" x="70" y="65">Functional Flow: Media Buyer Workbench</text>
+  <text class="subtitle" x="70" y="103">Read left to right: agents prepare the work, humans approve the decisions, and MCP execution is simulated.</text>
+
+  <rect class="laneAgent" x="60" y="155" width="1320" height="220" />
+  <text class="laneTitle" x="95" y="208">AI AGENTS PREPARE</text>
+
+  <rect class="laneHuman" x="60" y="440" width="1320" height="220" />
+  <text class="laneTitle" x="95" y="645">HUMAN MEDIA BUYER CONTROLS</text>
+
+  <rect class="box human" x="95" y="505" width="175" height="92" />
+  <circle class="badgeHuman" cx="130" cy="551" r="20" />
+  <text class="num" x="125" y="557">0</text>
+  <text class="label" x="165" y="537">Campaign</text>
+  <text class="label" x="165" y="561">Brief</text>
+  <text class="small" x="165" y="586">Input</text>
+
+  <rect class="box agent" x="300" y="250" width="195" height="92" />
+  <circle class="badgeAgent" cx="320" cy="296" r="20" />
+  <text class="num" x="315" y="302">1</text>
+  <text class="label" x="360" y="283">Strategy</text>
+  <text class="label" x="360" y="304">Agent</text>
+  <text class="small" x="360" y="324">KPIs, questions</text>
+
+  <rect class="box human" x="300" y="505" width="195" height="92" />
+  <circle class="badgeHuman" cx="320" cy="551" r="20" />
+  <text class="num" x="315" y="557">2</text>
+  <text class="label" x="360" y="537">Answer /</text>
+  <text class="label" x="360" y="558">Approve</text>
+  <text class="small" x="360" y="579">Strategy gate</text>
+
+  <rect class="box agent" x="540" y="250" width="195" height="92" />
+  <circle class="badgeAgent" cx="570" cy="296" r="20" />
+  <text class="num" x="565" y="302">3</text>
+  <text class="label" x="606" y="283">Planning</text>
+  <text class="label" x="606" y="304">Agent</text>
+  <text class="small" x="606" y="324">Plan, budget</text>
+
+  <rect class="box human" x="540" y="505" width="195" height="92" />
+  <circle class="badgeHuman" cx="570" cy="551" r="20" />
+  <text class="num" x="565" y="557">4</text>
+  <text class="label" x="606" y="537">Approve</text>
+  <text class="label" x="606" y="558">Plan</text>
+  <text class="small" x="606" y="579">Budget gate</text>
+
+  <rect class="box agent" x="780" y="250" width="195" height="92" />
+  <circle class="badgeAgent" cx="810" cy="296" r="20" />
+  <text class="num" x="805" y="302">5</text>
+  <text class="label" x="846" y="283">Operations</text>
+  <text class="small" x="846" y="310">Platform actions</text>
+  <text class="small" x="846" y="331">preflight checks</text>
+
+  <rect class="box human" x="780" y="505" width="195" height="92" />
+  <circle class="badgeHuman" cx="810" cy="551" r="20" />
+  <text class="num" x="805" y="557">6</text>
+  <text class="label" x="846" y="537">Approve</text>
+  <text class="label" x="846" y="558">Launch</text>
+  <text class="small" x="846" y="579">or reject actions</text>
+
+  <rect class="mcp" x="1015" y="505" width="195" height="92" />
+  <circle class="badgeMcp" cx="1045" cy="551" r="20" />
+  <text class="num" x="1040" y="557">7</text>
+  <text class="label" x="1081" y="537">Simulated</text>
+  <text class="label" x="1081" y="558">MCP Tools</text>
+  <text class="small" x="1081" y="579">No real ad spend</text>
+
+  <rect class="box agent" x="1245" y="250" width="120" height="92" />
+  <circle class="badgeAgent" cx="1268" cy="296" r="20" />
+  <text class="num" x="1263" y="302">8</text>
+  <text class="label" x="1292" y="281">Optimize</text>
+  <text class="label" x="1292" y="304">Report</text>
+  <text class="small" x="1292" y="328">Narrative</text>
+
+  <rect class="box human" x="1245" y="505" width="120" height="92" />
+  <circle class="badgeHuman" cx="1268" cy="551" r="20" />
+  <text class="num" x="1263" y="557">9</text>
+  <text class="label" x="1292" y="537">Review</text>
+  <text class="small" x="1292" y="564">Final recos</text>
+
+  <path class="arrow" d="M270 551 C285 485 288 360 300 296" />
+  <path class="arrow" d="M398 342 V505" />
+  <path class="arrow" d="M495 551 C515 485 520 360 540 296" />
+  <path class="arrow" d="M638 342 V505" />
+  <path class="arrow" d="M735 551 C755 485 760 360 780 296" />
+  <path class="arrow" d="M878 342 V505" />
+  <path class="arrow" d="M975 551 H1015" />
+  <path class="arrow" d="M1210 551 C1230 485 1235 360 1245 296" />
+  <path class="arrow" d="M1305 342 V505" />
+
+  <rect class="box" x="245" y="700" width="950" height="55" />
+  <text class="note" x="305" y="734">AI prepares work. Humans approve decisions. MCP shows safe simulated platform execution.</text>
+</svg>

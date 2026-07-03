@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Media Buyer Agentic Control Plane - Target Enterprise State</title>
+  <desc id="desc">Article-ready target-state architecture showing enterprise identity, durable orchestration, policy, immutable state, multi-layer evaluations, observability, secure tools, media agents, and governed platform integrations.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 42px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 21px Arial, sans-serif; fill: #475569; }
+      .section { font: 700 20px Arial, sans-serif; fill: #334155; letter-spacing: 1.1px; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 24; }
+      .controlPanel { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 3; rx: 28; }
+      .humanBox { fill: #ecfdf5; stroke: #059669; stroke-width: 2.5; rx: 18; }
+      .controlBox { fill: #ffffff; stroke: #8b5cf6; stroke-width: 2; rx: 16; }
+      .agentBox { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.5; rx: 18; }
+      .dataBox { fill: #fffbeb; stroke: #d97706; stroke-width: 2.5; rx: 18; }
+      .toolBox { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; rx: 18; }
+      .label { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 15px Arial, sans-serif; fill: #475569; }
+      .tiny { font: 400 13px Arial, sans-serif; fill: #64748b; }
+      .badge { fill: #7c3aed; }
+      .badgeText { font: 700 14px Arial, sans-serif; fill: #ffffff; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .controlArrow { stroke: #7c3aed; stroke-width: 2.5; fill: none; stroke-dasharray: 7 6; marker-end: url(#purpleArrow); }
+      .boundary { stroke: #94a3b8; stroke-width: 2; fill: none; stroke-dasharray: 7 7; }
+      .footer { font: 700 20px Arial, sans-serif; fill: #334155; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" />
+    </marker>
+    <marker id="purpleArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#7c3aed" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1000" />
+  <text class="title" x="70" y="68">Media Buyer Enterprise Control Plane</text>
+  <text class="subtitle" x="70" y="106">TARGET STATE: durable, policy-driven orchestration with versioned evidence, calibrated evaluation, and progressively authorized platform actions.</text>
+
+  <text class="section" x="70" y="158">PEOPLE, IDENTITY, AND ACCOUNTABILITY</text>
+  <rect class="humanBox" x="70" y="178" width="1460" height="92" />
+  <text class="label" x="105" y="216">Enterprise Identity</text><text class="small" x="105" y="244">SSO, tenant, role</text>
+  <line class="boundary" x1="345" y1="194" x2="345" y2="254" />
+  <text class="label" x="385" y="216">Separation of Duties</text><text class="small" x="385" y="244">Initiator, reviewer, approver</text>
+  <line class="boundary" x1="735" y1="194" x2="735" y2="254" />
+  <text class="label" x="775" y="216">Risk-Based Approval</text><text class="small" x="775" y="244">Spend, market, action, policy</text>
+  <line class="boundary" x1="1120" y1="194" x2="1120" y2="254" />
+  <text class="label" x="1160" y="216">Escalation and Override</text><text class="small" x="1160" y="244">Owner, reason, expiry, resolution</text>
+
+  <rect class="controlPanel" x="70" y="310" width="1460" height="280" />
+  <text class="section" x="105" y="350">ENTERPRISE AGENTIC CONTROL PLANE</text>
+
+  <rect class="controlBox" x="105" y="380" width="310" height="82" />
+  <circle class="badge" cx="132" cy="407" r="15" /><text class="badgeText" x="128" y="412">1</text>
+  <text class="label" x="158" y="408">Durable Orchestration</text>
+  <text class="small" x="125" y="438">Events, timers, retries, recovery</text>
+
+  <rect class="controlBox" x="450" y="380" width="310" height="82" />
+  <circle class="badge" cx="477" cy="407" r="15" /><text class="badgeText" x="473" y="412">2</text>
+  <text class="label" x="503" y="408">Policy and Budgets</text>
+  <text class="small" x="470" y="438">Calls, tokens, cost, time, risk</text>
+
+  <rect class="controlBox" x="795" y="380" width="310" height="82" />
+  <circle class="badge" cx="822" cy="407" r="15" /><text class="badgeText" x="818" y="412">3</text>
+  <text class="label" x="848" y="408">Immutable State</text>
+  <text class="small" x="815" y="438">Versions, lineage, stale impact</text>
+
+  <rect class="controlBox" x="1140" y="380" width="350" height="82" />
+  <circle class="badge" cx="1167" cy="407" r="15" /><text class="badgeText" x="1163" y="412">4</text>
+  <text class="label" x="1193" y="408">Multi-Layer Evaluation</text>
+  <text class="small" x="1160" y="438">Rules, experts, judges, trajectories, outcomes</text>
+
+  <rect class="controlBox" x="105" y="485" width="310" height="82" />
+  <circle class="badge" cx="132" cy="512" r="15" /><text class="badgeText" x="128" y="517">5</text>
+  <text class="label" x="158" y="513">Human Decision Service</text>
+  <text class="small" x="125" y="543">Version-bound, multi-party gates</text>
+
+  <rect class="controlBox" x="450" y="485" width="310" height="82" />
+  <circle class="badge" cx="477" cy="512" r="15" /><text class="badgeText" x="473" y="517">6</text>
+  <text class="label" x="503" y="513">End-to-End Observability</text>
+  <text class="small" x="470" y="543">Traces, attempts, cost, SLOs, alerts</text>
+
+  <rect class="controlBox" x="795" y="485" width="310" height="82" />
+  <circle class="badge" cx="822" cy="512" r="15" /><text class="badgeText" x="818" y="517">7</text>
+  <text class="label" x="848" y="513">Secure Tool Gateway</text>
+  <text class="small" x="815" y="543">Authz, idempotency, reconciliation</text>
+
+  <rect class="controlBox" x="1140" y="485" width="350" height="82" />
+  <circle class="badge" cx="1167" cy="512" r="15" /><text class="badgeText" x="1163" y="517">8</text>
+  <text class="label" x="1193" y="513">Tamper-Evident Audit</text>
+  <text class="small" x="1160" y="543">Correlation, retention, exception resolution</text>
+
+  <text class="section" x="70" y="640">BOUNDED DOMAIN AGENTS</text>
+  <rect class="panel" x="70" y="660" width="1460" height="126" />
+  <rect class="agentBox" x="105" y="690" width="230" height="66" />
+  <text class="label" x="157" y="718">Strategy Agent</text><text class="tiny" x="142" y="742">Evidence-aware strategy</text>
+  <rect class="agentBox" x="390" y="690" width="230" height="66" />
+  <text class="label" x="443" y="718">Planning Agent</text><text class="tiny" x="425" y="742">Forecasts and constraints</text>
+  <rect class="agentBox" x="675" y="690" width="230" height="66" />
+  <text class="label" x="718" y="718">Operations Agent</text><text class="tiny" x="708" y="742">Executable action intent</text>
+  <rect class="agentBox" x="960" y="690" width="230" height="66" />
+  <text class="label" x="993" y="718">Optimization Agent</text><text class="tiny" x="984" y="742">Measured recommendations</text>
+  <rect class="agentBox" x="1245" y="690" width="230" height="66" />
+  <text class="label" x="1298" y="718">Reporting Agent</text><text class="tiny" x="1284" y="742">Traceable executive view</text>
+  <path class="arrow" d="M335 723 H390" /><path class="arrow" d="M620 723 H675" /><path class="arrow" d="M905 723 H960" /><path class="arrow" d="M1190 723 H1245" />
+  <path class="controlArrow" d="M800 590 V660" />
+
+  <text class="section" x="70" y="838">ENTERPRISE EXECUTION AND LEARNING</text>
+  <rect class="dataBox" x="70" y="858" width="350" height="82" />
+  <text class="label" x="105" y="891">Model Gateway</text><text class="small" x="105" y="918">Approved models, routing, fallback</text>
+  <rect class="dataBox" x="450" y="858" width="350" height="82" />
+  <text class="label" x="485" y="891">Durable Data Platform</text><text class="small" x="485" y="918">PostgreSQL, artifacts, traces, evals</text>
+  <rect class="toolBox" x="830" y="858" width="350" height="82" />
+  <text class="label" x="865" y="891">Governed MCP Ecosystem</text><text class="small" x="865" y="918">Trusted servers and scoped credentials</text>
+  <rect class="toolBox" x="1210" y="858" width="320" height="82" />
+  <text class="label" x="1245" y="891">Media Platforms</text><text class="small" x="1245" y="918">Read, sandbox, then scoped writes</text>
+
+  <text class="footer" x="800" y="978" text-anchor="middle">Target principle: increase autonomy only when evidence, authority, reversibility, and operational resilience increase with it.</text>
+</svg>

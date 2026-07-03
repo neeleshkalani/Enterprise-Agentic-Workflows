@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+  <title id="title">Technical Architecture</title>
+  <desc id="desc">Architecture diagram with presentation, application, AI, data, connector, MCP, simulated platform, and governance components.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 38px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 21px Arial, sans-serif; fill: #475569; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 24; }
+      .box { fill: #ffffff; stroke-width: 2; rx: 18; }
+      .ui { fill: #eff6ff; stroke: #2563eb; }
+      .core { fill: #f8fafc; stroke: #334155; }
+      .agent { fill: #f5f3ff; stroke: #7c3aed; }
+      .llm { fill: #eef2ff; stroke: #4f46e5; }
+      .data { fill: #ecfdf5; stroke: #059669; }
+      .tool { fill: #fff7ed; stroke: #ea580c; }
+      .gov { fill: #fef2f2; stroke: #dc2626; }
+      .label { font: 700 21px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 15px Arial, sans-serif; fill: #475569; }
+      .panelTitle { font: 700 17px Arial, sans-serif; fill: #334155; letter-spacing: .5px; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .dash { stroke: #94a3b8; stroke-width: 2.8; fill: none; stroke-dasharray: 8 7; marker-end: url(#lighthead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" />
+    </marker>
+    <marker id="lighthead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="810" />
+
+  <text class="title" x="70" y="70">Technology Architecture</text>
+  <text class="subtitle" x="70" y="108">The functional flow is implemented with a UI, workflow service, agent modules, LLM provider, database, connectors, and governance.</text>
+
+  <rect class="panel" x="70" y="160" width="250" height="430" />
+  <text class="panelTitle" x="122" y="194">PRESENTATION</text>
+  <rect class="box ui" x="105" y="245" width="180" height="120" />
+  <text class="label" x="143" y="289">Streamlit UI</text>
+  <text class="small" x="132" y="319">Brief input, agent</text>
+  <text class="small" x="132" y="342">runs, approvals</text>
+  <rect class="box gov" x="105" y="420" width="180" height="105" />
+  <text class="label" x="135" y="464">Governance</text>
+  <text class="small" x="132" y="493">Reads audit history</text>
+
+  <rect class="panel" x="370" y="160" width="330" height="430" />
+  <text class="panelTitle" x="452" y="194">APPLICATION CORE</text>
+  <rect class="box core" x="410" y="235" width="250" height="135" />
+  <text class="label" x="458" y="280">Workflow Service</text>
+  <text class="small" x="445" y="313">Stages, approvals,</text>
+  <text class="small" x="445" y="336">validation, versioning</text>
+  <rect class="box agent" x="410" y="425" width="250" height="105" />
+  <text class="label" x="466" y="468">Agent Modules</text>
+  <text class="small" x="445" y="498">Strategy, Plan, Ops,</text>
+  <text class="small" x="445" y="520">Optimization, Report</text>
+
+  <rect class="panel" x="750" y="160" width="285" height="430" />
+  <text class="panelTitle" x="831" y="194">AI + DATA</text>
+  <rect class="box llm" x="785" y="235" width="215" height="125" />
+  <text class="label" x="831" y="279">LLM Provider</text>
+  <text class="small" x="823" y="311">Gemini live mode</text>
+  <text class="small" x="823" y="334">OpenAI / mock modes</text>
+  <rect class="box data" x="785" y="425" width="215" height="120" />
+  <text class="label" x="837" y="468">SQLite DB</text>
+  <text class="small" x="823" y="499">SQLAlchemy layer</text>
+  <text class="small" x="823" y="522">State + audit records</text>
+
+  <rect class="panel" x="1085" y="160" width="285" height="430" />
+  <text class="panelTitle" x="1155" y="194">INTEGRATIONS</text>
+  <rect class="box tool" x="1120" y="235" width="215" height="115" />
+  <text class="label" x="1160" y="278">Connector Router</text>
+  <text class="small" x="1156" y="311">Chooses MCP or mock</text>
+  <rect class="box tool" x="1120" y="395" width="215" height="95" />
+  <text class="label" x="1160" y="435">LinkedIn MCP</text>
+  <text class="small" x="1156" y="465">Local server, tools</text>
+  <rect class="box tool" x="1120" y="520" width="215" height="55" />
+  <text class="label" x="1150" y="555">Simulated Platforms</text>
+
+  <path class="arrow" d="M285 305 H410" />
+  <path class="arrow" d="M535 370 V425" />
+  <path class="arrow" d="M660 478 C710 430 740 315 785 298" />
+  <path class="arrow" d="M660 300 H785" />
+  <path class="arrow" d="M660 322 C790 382 960 293 1120 293" />
+  <path class="arrow" d="M1228 350 V395" />
+  <path class="arrow" d="M1228 490 V520" />
+
+  <path class="dash" d="M535 370 C500 455 390 475 285 475" />
+  <path class="dash" d="M892 545 C760 640 430 610 285 475" />
+  <path class="dash" d="M1228 575 C1040 690 520 650 285 475" />
+
+  <text class="small" x="465" y="652">Key idea: workflow controls the process, agents create structured outputs,</text>
+  <text class="small" x="500" y="680">connectors simulate platform execution, and governance records everything.</text>
+</svg>

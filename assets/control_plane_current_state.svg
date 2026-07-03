@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Media Buyer Agentic Control Plane - Implemented Today</title>
+  <desc id="desc">Article-ready architecture diagram showing human controls, the implemented control plane, five media buyer agents, model providers, SQLite state, and simulated MCP tools.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 42px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 21px Arial, sans-serif; fill: #475569; }
+      .section { font: 700 20px Arial, sans-serif; fill: #334155; letter-spacing: 1.1px; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 24; }
+      .controlPanel { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 3; rx: 28; }
+      .humanBox { fill: #ecfdf5; stroke: #059669; stroke-width: 2.5; rx: 18; }
+      .controlBox { fill: #ffffff; stroke: #8b5cf6; stroke-width: 2; rx: 16; }
+      .agentBox { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.5; rx: 18; }
+      .dataBox { fill: #fffbeb; stroke: #d97706; stroke-width: 2.5; rx: 18; }
+      .toolBox { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; rx: 18; }
+      .label { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .small { font: 400 15px Arial, sans-serif; fill: #475569; }
+      .tiny { font: 400 13px Arial, sans-serif; fill: #64748b; }
+      .badge { fill: #7c3aed; }
+      .badgeText { font: 700 14px Arial, sans-serif; fill: #ffffff; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .controlArrow { stroke: #7c3aed; stroke-width: 2.5; fill: none; stroke-dasharray: 7 6; marker-end: url(#purpleArrow); }
+      .boundary { stroke: #94a3b8; stroke-width: 2; fill: none; stroke-dasharray: 7 7; }
+      .footer { font: 700 20px Arial, sans-serif; fill: #334155; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#64748b" />
+    </marker>
+    <marker id="purpleArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#7c3aed" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="1000" />
+  <text class="title" x="70" y="68">Media Buyer Agentic Control Plane</text>
+  <text class="subtitle" x="70" y="106">IMPLEMENTED TODAY: agents generate the work; explicit workflow controls govern decisions, state, evaluation, and simulated execution.</text>
+
+  <text class="section" x="70" y="158">HUMAN CONTROL</text>
+  <rect class="humanBox" x="70" y="178" width="1460" height="92" />
+  <text class="label" x="105" y="216">Streamlit Workbench</text>
+  <text class="small" x="105" y="244">Campaign brief</text>
+  <line class="boundary" x1="315" y1="194" x2="315" y2="254" />
+  <text class="label" x="355" y="216">Clarification</text>
+  <text class="small" x="355" y="244">Answer required questions</text>
+  <line class="boundary" x1="625" y1="194" x2="625" y2="254" />
+  <text class="label" x="665" y="216">Approval Gates</text>
+  <text class="small" x="665" y="244">Approve, revise, or reject</text>
+  <line class="boundary" x1="965" y1="194" x2="965" y2="254" />
+  <text class="label" x="1005" y="216">Governance View</text>
+  <text class="small" x="1005" y="244">Inspect runs, evals, tools, and audit</text>
+
+  <rect class="controlPanel" x="70" y="310" width="1460" height="280" />
+  <text class="section" x="105" y="350">CONTROL PLANE - EXPLICIT PYTHON WORKFLOW SERVICE</text>
+
+  <rect class="controlBox" x="105" y="380" width="280" height="82" />
+  <circle class="badge" cx="132" cy="407" r="15" /><text class="badgeText" x="128" y="412">1</text>
+  <text class="label" x="158" y="408">Workflow and Gates</text>
+  <text class="small" x="125" y="438">Stages + current-version approval</text>
+
+  <rect class="controlBox" x="420" y="380" width="280" height="82" />
+  <circle class="badge" cx="447" cy="407" r="15" /><text class="badgeText" x="443" y="412">2</text>
+  <text class="label" x="473" y="408">State and Memory</text>
+  <text class="small" x="440" y="438">SQLite outside agent memory</text>
+
+  <rect class="controlBox" x="735" y="380" width="280" height="82" />
+  <circle class="badge" cx="762" cy="407" r="15" /><text class="badgeText" x="758" y="412">3</text>
+  <text class="label" x="788" y="408">Bounded Clarification</text>
+  <text class="small" x="755" y="438">Round, count, and repeat limits</text>
+
+  <rect class="controlBox" x="1050" y="380" width="440" height="82" />
+  <circle class="badge" cx="1077" cy="407" r="15" /><text class="badgeText" x="1073" y="412">4</text>
+  <text class="label" x="1103" y="408">Typed Contracts and Deterministic Evals</text>
+  <text class="small" x="1070" y="438">Pydantic validation + persisted completeness checks</text>
+
+  <rect class="controlBox" x="105" y="485" width="330" height="82" />
+  <circle class="badge" cx="132" cy="512" r="15" /><text class="badgeText" x="128" y="517">5</text>
+  <text class="label" x="158" y="513">Revision and Invalidation</text>
+  <text class="small" x="125" y="543">Send work back; clear dependents</text>
+
+  <rect class="controlBox" x="470" y="485" width="330" height="82" />
+  <circle class="badge" cx="497" cy="512" r="15" /><text class="badgeText" x="493" y="517">6</text>
+  <text class="label" x="523" y="513">Model Observability</text>
+  <text class="small" x="490" y="543">Inputs, outputs, attempts, usage</text>
+
+  <rect class="controlBox" x="835" y="485" width="330" height="82" />
+  <circle class="badge" cx="862" cy="512" r="15" /><text class="badgeText" x="858" y="517">7</text>
+  <text class="label" x="888" y="513">MCP Tool Governance</text>
+  <text class="small" x="855" y="543">Approval before simulated launch</text>
+
+  <rect class="controlBox" x="1200" y="485" width="290" height="82" />
+  <circle class="badge" cx="1227" cy="512" r="15" /><text class="badgeText" x="1223" y="517">8</text>
+  <text class="label" x="1253" y="513">Audit Trail</text>
+  <text class="small" x="1220" y="543">Decisions and control events</text>
+
+  <text class="section" x="70" y="640">STATELESS MEDIA BUYER AGENTS</text>
+  <rect class="panel" x="70" y="660" width="1460" height="126" />
+  <rect class="agentBox" x="105" y="690" width="230" height="66" />
+  <text class="label" x="157" y="718">Strategy Agent</text><text class="tiny" x="145" y="742">Objectives, KPIs, questions</text>
+  <rect class="agentBox" x="390" y="690" width="230" height="66" />
+  <text class="label" x="443" y="718">Planning Agent</text><text class="tiny" x="440" y="742">Channels and budget</text>
+  <rect class="agentBox" x="675" y="690" width="230" height="66" />
+  <text class="label" x="718" y="718">Operations Agent</text><text class="tiny" x="722" y="742">Proposed actions</text>
+  <rect class="agentBox" x="960" y="690" width="230" height="66" />
+  <text class="label" x="993" y="718">Optimization Agent</text><text class="tiny" x="1000" y="742">Recommendations</text>
+  <rect class="agentBox" x="1245" y="690" width="230" height="66" />
+  <text class="label" x="1298" y="718">Reporting Agent</text><text class="tiny" x="1309" y="742">Narrative report</text>
+  <path class="arrow" d="M335 723 H390" /><path class="arrow" d="M620 723 H675" /><path class="arrow" d="M905 723 H960" /><path class="arrow" d="M1190 723 H1245" />
+  <path class="controlArrow" d="M800 590 V660" />
+
+  <text class="section" x="70" y="838">EXECUTION AND EVIDENCE</text>
+  <rect class="dataBox" x="70" y="858" width="440" height="82" />
+  <text class="label" x="105" y="891">Gemini / OpenAI / Mock</text><text class="small" x="105" y="918">Structured generation; optional Google grounding</text>
+  <rect class="dataBox" x="570" y="858" width="440" height="82" />
+  <text class="label" x="605" y="891">SQLite + SQLAlchemy</text><text class="small" x="605" y="918">Artifacts, runs, approvals, evals, calls, audit</text>
+  <rect class="toolBox" x="1070" y="858" width="460" height="82" />
+  <text class="label" x="1105" y="891">Local LinkedIn MCP Simulator</text><text class="small" x="1105" y="918">Real MCP protocol; no external platform or spend</text>
+
+  <text class="footer" x="800" y="978" text-anchor="middle">Implemented boundary: governed local workflow with live model option and simulated platform execution.</text>
+</svg>
