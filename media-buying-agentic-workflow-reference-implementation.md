@@ -52,6 +52,7 @@ control-plane implementation, evaluation approach, and enterprise target state.
 - [Demonstration Path](#10-demonstration-path)
 - [Repository Guide](#11-repository-guide)
 - [Closing Perspective](#closing-perspective)
+- [Further Reading](#further-reading)
 
 ---
 
@@ -632,3 +633,10 @@ failure, and evidence.
 
 > Agents may perform parts of the work. The control plane is what makes that
 > work accountable, repeatable, and capable of scaling across an enterprise.
+
+---
+
+## Further Reading
+
+- [Enterprise Agentic Workflows index](README.md)
+- [Data Stewardship Agentic Workflow Reference Implementation](data-stewardship-agentic-workflow-reference-implementation.md)
