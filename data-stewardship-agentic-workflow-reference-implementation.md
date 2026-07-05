@@ -40,7 +40,7 @@ In short, this prototype demonstrates how enterprise data onboarding can use AI 
 - [Enterprise value](#14-enterprise-value)
 - [Technology choices](#15-technology-choices)
 - [Demonstration availability](#16-demonstration-availability)
-- [Repository map](#17-repository-map)
+- [Implementation map](#17-implementation-map)
 - [Engineering decisions](#18-engineering-decisions-and-trade-offs)
 - [What the project demonstrates](#19-what-this-project-demonstrates)
 - [Closing perspective](#closing-perspective)
@@ -387,9 +387,11 @@ A typical demonstration follows this path:
 7. approve Assessment, Contract, and Publication versions; and
 8. publish through governed MCP into a simulated catalog and inspect governance evidence.
 
-## 17. Repository map
+## 17. Implementation map
 
-| Area | Location |
+The prototype is organized around the following implementation areas:
+
+| Implementation area | Location |
 |---|---|
 | Streamlit experience | `app.py` |
 | Workflow control plane | `datasteward/workflow.py` |
