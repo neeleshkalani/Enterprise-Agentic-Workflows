@@ -252,6 +252,20 @@ Current rule-based indicators are described as control-completeness or consisten
 
 ![Current and future evaluation approach](assets/data_steward_evaluation_evolution.svg)
 
+### Evaluation maturity needed for production
+
+A production evaluation program would extend today's deterministic consistency checks with:
+
+1. versioned reference datasets representing multiple domains, source patterns, schema changes, quality failures and difficult edge cases;
+2. expert-labelled rubrics for domain interpretation, critical-data identification, classification, remediation practicality, contract quality and publication readiness;
+3. calibrated model-based judges for selected qualitative dimensions, continuously compared with Human expert labels;
+4. workflow-trajectory tests covering clarification, remediation loops, revisions, approvals, invalidation, retries, fallback and partial tool failure;
+5. adversarial tests for prompt injection, policy bypass, sensitive-data exposure, unsupported mappings, malicious metadata and unsafe tool requests;
+6. regression gates for changes to prompts, models, domain policies, evaluators, tools and orchestration code; and
+7. production outcome measures such as reviewer acceptance, edit distance, onboarding cycle time, escaped quality defects, overrides, exceptions, incidents and data-product adoption.
+
+These evaluation layers should remain distinct. Structural consistency, expert-assessed recommendation quality, workflow behavior and production outcomes answer different questions and should not be collapsed into one generic Agent score.
+
 ## 10. Governed workflow validation
 
 The prototype was validated through a complete July 2026 live Gemini run using synthetic Legal Entity data.
@@ -318,20 +332,6 @@ Production adoption requires more than connecting the local application to live 
 - scalable evaluation with reference cases, expert labels and regression gates;
 - scoped tool credentials, idempotency, reconciliation and compensation; and
 - enterprise catalog, lineage, data-quality, MDM and observability integration.
-
-### Evaluation maturity needed for production
-
-A production evaluation program would extend today's deterministic consistency checks with:
-
-1. versioned reference datasets representing multiple domains, source patterns, schema changes, quality failures and difficult edge cases;
-2. expert-labelled rubrics for domain interpretation, critical-data identification, classification, remediation practicality, contract quality and publication readiness;
-3. calibrated model-based judges for selected qualitative dimensions, continuously compared with Human expert labels;
-4. workflow-trajectory tests covering clarification, remediation loops, revisions, approvals, invalidation, retries, fallback and partial tool failure;
-5. adversarial tests for prompt injection, policy bypass, sensitive-data exposure, unsupported mappings, malicious metadata and unsafe tool requests;
-6. regression gates for changes to prompts, models, domain policies, evaluators, tools and orchestration code; and
-7. production outcome measures such as reviewer acceptance, edit distance, onboarding cycle time, escaped quality defects, overrides, exceptions, incidents and data-product adoption.
-
-These evaluation layers should remain distinct. Structural consistency, expert-assessed recommendation quality, workflow behavior and production outcomes answer different questions and should not be collapsed into one generic Agent score.
 
 ### Large-dataset processing
 
