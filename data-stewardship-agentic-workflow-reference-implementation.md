@@ -8,6 +8,8 @@ The project is designed around one principle:
 
 > Agents prepare evidence and recommendations. The control plane governs progression and execution. The Human Data Steward remains accountable.
 
+In short, this prototype demonstrates how enterprise data onboarding can use AI Agents without handing authority to them. Deterministic services establish facts, specialist Agents prepare recommendations, Human stewards approve material decisions, and the control plane governs progression, versions, evaluation, evidence and tool execution.
+
 **Primary use case:** onboarding external Legal Entity data  
 **Additional domain:** Customer data  
 **Implementation:** Python, Streamlit, Pydantic, pandas, SQLAlchemy, SQLite, Gemini, FastMCP and pytest
