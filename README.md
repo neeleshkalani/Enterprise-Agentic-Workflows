@@ -17,8 +17,9 @@ These implementations explore how agentic workflows can be designed for enterpri
 
 ## Reference Implementations
 
-- [Media Buying Agentic Workflow Reference Implementation](./media-buying-agentic-workflow-reference-implementation.md)
-- [Data Stewardship Agentic Workflow Reference Implementation](./data-stewardship-agentic-workflow-reference-implementation.md)
+- [Media Buying Agentic Workflow Reference Implementation](./media-buying-agentic-workflow-reference-implementation.md) — governed agentic workflow for campaign strategy, planning, activation, optimization, reporting, human approvals, evaluation, observability, and simulated MCP-based platform execution.
+
+- [Data Stewardship Agentic Workflow Reference Implementation](./data-stewardship-agentic-workflow-reference-implementation.md) — governed AI-assisted data-product onboarding pattern with deterministic profiling, bounded specialist agents, typed artifacts, policy decisions, human approval, evaluation, and simulated MCP-based catalog publication.
 
 ## Why This Repository
 

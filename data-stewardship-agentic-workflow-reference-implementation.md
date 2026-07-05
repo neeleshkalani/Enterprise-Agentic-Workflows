@@ -34,9 +34,12 @@ In short, this prototype demonstrates how enterprise data onboarding can use AI 
 - [Governed MCP publication](#11-governed-mcp-publication)
 - [Capability boundaries](#12-live-deterministic-simulated-and-future-boundaries)
 
-**Enterprise evolution and value**
+**Enterprise target state**
 
 - [Enterprise target state](#13-enterprise-target-state-and-production-scale)
+
+**Value and reference**
+
 - [Enterprise value](#14-enterprise-value)
 - [Technology choices](#15-technology-choices)
 - [Demonstration availability](#16-demonstration-availability)
