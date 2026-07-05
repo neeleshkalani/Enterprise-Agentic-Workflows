@@ -18,6 +18,7 @@ These implementations explore how agentic workflows can be designed for enterpri
 ## Reference Implementations
 
 - [Media Buying Agentic Workflow Reference Implementation](./media-buying-agentic-workflow-reference-implementation.md)
+- [Data Stewardship Agentic Workflow Reference Implementation](./data-stewardship-agentic-workflow-reference-implementation.md)
 
 ## Why This Repository
 
@@ -32,4 +33,4 @@ auditable, and suitable for enterprise adoption.
 
 ## Current Status
 
-This repository is evolving and currently includes early reference implementation notes. Additional workflows, architecture details, and implementation patterns will be added over time.
+This repository currently includes governed agentic reference implementations for Media Buying and Data Stewardship. Additional workflows, architecture details, and implementation patterns will be added over time.

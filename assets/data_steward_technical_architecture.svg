@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+ <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#626262"/></marker></defs>
+ <style>text{font-family:Arial,sans-serif;fill:#242424}.t{font-size:40px;font-weight:700}.s{font-size:19px;fill:#666}.h{font-size:19px;font-weight:700}.b{font-size:15px;fill:#555}.box{fill:#fff;stroke:#d0d0d0;stroke-width:2}.human{fill:#fff8c5;stroke:#cfb400;stroke-width:2}.agent{fill:#f4f0ff;stroke:#8067c7;stroke-width:2}.real{fill:#e8f5ed;stroke:#58916d;stroke-width:2}.sim{fill:#fff3df;stroke:#c4862e;stroke-width:2}.dark{fill:#242424}.white{fill:#fff}.line{stroke:#626262;stroke-width:3;fill:none;marker-end:url(#a)}.return{stroke:#777;stroke-width:2;fill:none;stroke-dasharray:7 6;marker-end:url(#a)}</style>
+ <rect width="1600" height="900" fill="#fbfbfa"/><rect width="18" height="900" fill="#ffe600"/>
+ <text x="70" y="74" class="t">Current prototype - technical flow</text><text x="70" y="110" class="s">The UI requests work; the control plane authorizes it; services execute; evidence returns to Human review.</text>
+ <rect x="70" y="180" width="220" height="105" rx="16" class="human"/><text x="95" y="218" class="h">Human Data Steward</text><text x="95" y="248" class="b">Run, answer, review</text><text x="95" y="271" class="b">approve or revise</text>
+ <rect x="350" y="180" width="220" height="105" rx="16" class="box"/><text x="375" y="218" class="h">Streamlit UI</text><text x="375" y="248" class="b">Guided workflow and</text><text x="375" y="271" class="b">governance views</text>
+ <rect x="630" y="155" width="340" height="155" rx="18" class="dark"/><text x="655" y="197" class="h white">Explicit Python Control Plane</text><text x="655" y="229" class="b white">Authorize current stage and version</text><text x="655" y="254" class="b white">Assemble context and enforce policy</text><text x="655" y="279" class="b white">Validate, persist and transition</text>
+ <path d="M290 232H345 M570 232H625" class="line"/>
+
+ <rect x="1040" y="135" width="490" height="195" rx="18" class="agent"/><text x="1065" y="173" class="h">Five stateless specialist Agents</text><text x="1065" y="205" class="b">1. Intake &amp; Discovery Agent</text><text x="1065" y="229" class="b">2. Profiling &amp; Quality Agent</text><text x="1065" y="253" class="b">3. Classification &amp; Risk Agent</text><text x="1065" y="277" class="b">4. Data Contract &amp; Remediation Agent</text><text x="1065" y="301" class="b">5. Publication &amp; Monitoring Agent</text>
+ <path d="M970 232H1035" class="line"/>
+
+ <rect x="70" y="405" width="300" height="130" rx="16" class="real"/><text x="95" y="445" class="h">Deterministic data services</text><text x="95" y="477" class="b">pandas profile and comparison</text><text x="95" y="502" class="b">rule-based consistency checks</text>
+ <rect x="420" y="405" width="300" height="130" rx="16" class="agent"/><text x="445" y="445" class="h">Model provider layer</text><text x="445" y="477" class="b">Gemini primary + fallback</text><text x="445" y="502" class="b">or deterministic mock mode</text>
+ <rect x="770" y="405" width="300" height="130" rx="16" class="box"/><text x="795" y="445" class="h">Pydantic contracts</text><text x="795" y="477" class="b">Typed inputs and outputs</text><text x="795" y="502" class="b">before workflow persistence</text>
+ <rect x="1120" y="405" width="410" height="130" rx="16" class="sim"/><text x="1145" y="445" class="h">Governed catalog boundary</text><text x="1145" y="477" class="b">Real local FastMCP client/server</text><text x="1145" y="502" class="b">Simulated enterprise catalog</text>
+ <path d="M800 310V360H220V400" class="line"/><path d="M800 310V370H570V400" class="line"/><path d="M800 310V380H920V400" class="line"/><path d="M800 310V390H1325V400" class="line"/>
+
+ <rect x="185" y="640" width="500" height="125" rx="16" class="box"/><text x="210" y="680" class="h">SQLAlchemy + SQLite workflow state</text><text x="210" y="712" class="b">Datasets, artifact versions, clarifications,</text><text x="210" y="737" class="b">approvals and current stage</text>
+ <rect x="915" y="640" width="500" height="125" rx="16" class="box"/><text x="940" y="680" class="h">Governance evidence</text><text x="940" y="712" class="b">Evaluations, model attempts, usage, MCP calls</text><text x="940" y="737" class="b">and business audit events</text>
+ <path d="M570 535V590H435V635" class="line"/><path d="M920 535V600H1165V635" class="line"/><path d="M1325 535V615H1165V635" class="line"/>
+ <path d="M1165 640V580H800V315" class="return"/><path d="M435 640V570H460V290" class="return"/>
+ <rect x="70" y="825" width="430" height="50" rx="12" class="real"/><text x="92" y="857" class="h">REAL LOCAL: control, facts, state, MCP</text>
+ <rect x="585" y="825" width="430" height="50" rx="12" class="agent"/><text x="607" y="857" class="h">LIVE WHEN ENABLED: Gemini attempts</text>
+ <rect x="1100" y="825" width="430" height="50" rx="12" class="sim"/><text x="1122" y="857" class="h">SIMULATED: enterprise catalog</text>
+</svg>

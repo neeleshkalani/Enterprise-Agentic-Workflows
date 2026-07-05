@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+ <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+ <style>text{font-family:Arial,sans-serif;fill:#10213b}.title{font-size:42px;font-weight:700}.sub{font-size:20px;fill:#334b6b}.label{font-size:19px;font-weight:700;letter-spacing:1px}.head{font-size:17px;font-weight:700}.body{font-size:14px;fill:#334b6b}.humanLayer{fill:#e9fbf3;stroke:#00a37a;stroke-width:3}.controlLayer{fill:#f5f1ff;stroke:#7547ff;stroke-width:3}.controlCard{fill:#fff;stroke:#8b5cff;stroke-width:2}.agentLayer{fill:#fff;stroke:#cbd5e1;stroke-width:2}.agentCard{fill:#f4f7ff;stroke:#2463eb;stroke-width:2}.execCard{fill:#fffaf0;stroke:#db8500;stroke-width:2}.mcpCard{fill:#fff7f0;stroke:#f15a24;stroke-width:2}.divider{stroke:#9fb0c6;stroke-width:2;stroke-dasharray:7 7}.flow{stroke:#64748b;stroke-width:3;marker-end:url(#arrow)}.down{stroke:#7547ff;stroke-width:3;stroke-dasharray:7 5;marker-end:url(#arrow)}.num{fill:#7547ff}.numText{fill:#fff;font-size:14px;font-weight:700}.footer{font-size:17px;font-weight:700}</style>
+ <rect width="1600" height="1000" fill="#f6f8fb"/>
+ <text x="70" y="68" class="title">Enterprise Data Stewardship Control Plane</text>
+ <text x="70" y="105" class="sub">TARGET STATE: durable orchestration, enterprise identity, shared policy, secure tools, immutable evidence and measurable outcomes.</text>
+
+ <text x="70" y="158" class="label">HUMAN CONTROL AND OPERATING MODEL</text>
+ <rect x="70" y="178" width="1460" height="94" rx="18" class="humanLayer"/>
+ <line x1="400" y1="194" x2="400" y2="256" class="divider"/><line x1="760" y1="194" x2="760" y2="256" class="divider"/><line x1="1120" y1="194" x2="1120" y2="256" class="divider"/>
+ <text x="105" y="218" class="head">Steward and Approver Portals</text><text x="105" y="247" class="body">Role-specific work queues and evidence</text>
+ <text x="435" y="218" class="head">Identity and Separation of Duties</text><text x="435" y="247" class="body">SSO, RBAC, delegation and independence</text>
+ <text x="795" y="218" class="head">Escalation and Exception Management</text><text x="795" y="247" class="body">Owners, due dates, expiry and renewal</text>
+ <text x="1155" y="218" class="head">Portfolio Oversight</text><text x="1155" y="247" class="body">Risk, value, adoption and control health</text>
+
+ <rect x="70" y="318" width="1460" height="285" rx="28" class="controlLayer"/>
+ <text x="105" y="362" class="label">ENTERPRISE CONTROL PLANE - DURABLE AND POLICY-DRIVEN</text>
+ <g>
+  <rect x="105" y="395" width="300" height="82" rx="15" class="controlCard"/><circle cx="132" cy="422" r="16" class="num"/><text x="127" y="427" class="numText">1</text><text x="160" y="424" class="head">Durable Workflow</text><text x="125" y="454" class="body">Retries, timers, idempotency and recovery</text>
+  <rect x="440" y="395" width="300" height="82" rx="15" class="controlCard"/><circle cx="467" cy="422" r="16" class="num"/><text x="462" y="427" class="numText">2</text><text x="495" y="424" class="head">Identity and Authorization</text><text x="460" y="454" class="body">Subject, role, tenant and decision rights</text>
+  <rect x="775" y="395" width="300" height="82" rx="15" class="controlCard"/><circle cx="802" cy="422" r="16" class="num"/><text x="797" y="427" class="numText">3</text><text x="830" y="424" class="head">Versioned Policy Service</text><text x="795" y="454" class="body">Risk tiers, budgets, gates and reasons</text>
+  <rect x="1110" y="395" width="385" height="82" rx="15" class="controlCard"/><circle cx="1137" cy="422" r="16" class="num"/><text x="1132" y="427" class="numText">4</text><text x="1165" y="424" class="head">Context, Lineage and Immutable Versions</text><text x="1130" y="454" class="body">Exact parents, dependencies, hashes and current pointers</text>
+  <rect x="105" y="505" width="330" height="82" rx="15" class="controlCard"/><circle cx="132" cy="532" r="16" class="num"/><text x="127" y="537" class="numText">5</text><text x="160" y="534" class="head">Evaluation Platform</text><text x="125" y="564" class="body">Rules, references, expert rubrics and judges</text>
+  <rect x="470" y="505" width="330" height="82" rx="15" class="controlCard"/><circle cx="497" cy="532" r="16" class="num"/><text x="492" y="537" class="numText">6</text><text x="525" y="534" class="head">Model Gateway</text><text x="490" y="564" class="body">Routing, redaction, fallback and cost controls</text>
+  <rect x="835" y="505" width="330" height="82" rx="15" class="controlCard"/><circle cx="862" cy="532" r="16" class="num"/><text x="857" y="537" class="numText">7</text><text x="890" y="534" class="head">Secure Tool Gateway</text><text x="855" y="564" class="body">Intent, pre-call auth, idempotency and reconcile</text>
+  <rect x="1200" y="505" width="295" height="82" rx="15" class="controlCard"/><circle cx="1227" cy="532" r="16" class="num"/><text x="1222" y="537" class="numText">8</text><text x="1255" y="534" class="head">Observability and Audit</text><text x="1220" y="564" class="body">Traces, SLOs and tamper-evident records</text>
+ </g>
+
+ <line x1="800" y1="603" x2="800" y2="665" class="down"/>
+ <text x="70" y="650" class="label">BOUNDED ENTERPRISE DATA STEWARDSHIP AGENTS</text>
+ <rect x="70" y="675" width="1460" height="125" rx="24" class="agentLayer"/>
+ <rect x="105" y="705" width="250" height="66" rx="16" class="agentCard"/><text x="135" y="733" class="head">Intake &amp; Discovery Agent</text><text x="135" y="758" class="body">Domain context and questions</text>
+ <rect x="390" y="705" width="250" height="66" rx="16" class="agentCard"/><text x="415" y="733" class="head">Profiling &amp; Quality Agent</text><text x="415" y="758" class="body">Evidence interpretation</text>
+ <rect x="675" y="705" width="250" height="66" rx="16" class="agentCard"/><text x="700" y="733" class="head">Classification &amp; Risk Agent</text><text x="700" y="758" class="body">Risk and handling proposals</text>
+ <rect x="960" y="705" width="250" height="66" rx="16" class="agentCard"/><text x="985" y="733" class="head">Contract &amp; Remediation Agent</text><text x="985" y="758" class="body">Product design and actions</text>
+ <rect x="1245" y="705" width="250" height="66" rx="16" class="agentCard"/><text x="1270" y="733" class="head">Publication &amp; Monitoring Agent</text><text x="1270" y="758" class="body">Metadata and impact narrative</text>
+ <line x1="355" y1="738" x2="385" y2="738" class="flow"/><line x1="640" y1="738" x2="670" y2="738" class="flow"/><line x1="925" y1="738" x2="955" y2="738" class="flow"/><line x1="1210" y1="738" x2="1240" y2="738" class="flow"/>
+
+ <text x="70" y="850" class="label">ENTERPRISE EXECUTION, INTEGRATION AND EVIDENCE</text>
+ <rect x="70" y="870" width="330" height="88" rx="17" class="execCard"/><text x="105" y="907" class="head">Source and Profiling Adapters</text><text x="105" y="936" class="body">Files, APIs, tables, CDC and scalable DQ jobs</text>
+ <rect x="435" y="870" width="330" height="88" rx="17" class="execCard"/><text x="470" y="907" class="head">Durable State and Artifacts</text><text x="470" y="936" class="body">PostgreSQL, object store and dependency graph</text>
+ <rect x="800" y="870" width="330" height="88" rx="17" class="execCard"/><text x="835" y="907" class="head">Enterprise Data Ecosystem</text><text x="835" y="936" class="body">Catalog, MDM, DQ, lineage and lakehouse</text>
+ <rect x="1165" y="870" width="365" height="88" rx="17" class="mcpCard"/><text x="1200" y="907" class="head">Outcome and Control Analytics</text><text x="1200" y="936" class="body">Acceptance, edits, defects, cycle time, reuse and value</text>
+ <text x="800" y="987" text-anchor="middle" class="footer">Target boundary: durable Human-accountable control plane with secure enterprise integration and outcome learning.</text>
+</svg>
