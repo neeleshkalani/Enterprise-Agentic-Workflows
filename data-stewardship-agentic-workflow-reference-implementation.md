@@ -8,12 +8,11 @@ The project is designed around one principle:
 
 > Agents prepare evidence and recommendations. The control plane governs progression and execution. The Human Data Steward remains accountable.
 
-**Repository:** [github.com/neeleshkalani/DataSteward](https://github.com/neeleshkalani/DataSteward)  
 **Primary use case:** onboarding external Legal Entity data  
 **Additional domain:** Customer data  
 **Implementation:** Python, Streamlit, Pydantic, pandas, SQLAlchemy, SQLite, Gemini, FastMCP and pytest
 
-**Source availability:** The working prototype is available in the public [DataSteward repository](https://github.com/neeleshkalani/DataSteward). This reference documents the functional workflow, technical architecture, implemented control plane, evaluation approach and enterprise target state.
+**Source availability:** The working prototype is maintained separately. This public reference documents the functional workflow, technical architecture, implemented control plane, evaluation approach, and enterprise target state. A walkthrough or source access can be provided on request.
 
 ## Contents
 
@@ -38,7 +37,7 @@ The project is designed around one principle:
 - [Enterprise target state](#13-enterprise-target-state-and-production-scale)
 - [Enterprise value](#14-enterprise-value)
 - [Technology choices](#15-technology-choices)
-- [Run the project](#16-run-the-project)
+- [Demonstration path and source access](#16-demonstration-path-and-source-access)
 - [Repository map](#17-repository-map)
 - [Engineering decisions](#18-engineering-decisions-and-trade-offs)
 - [What the project demonstrates](#19-what-this-project-demonstrates)
@@ -262,10 +261,7 @@ The trajectory demonstrated:
 7. primary-model timeouts and successful fallback-model attempts without losing workflow state; and
 8. five successful governed MCP operations that created and published simulated draft `SIM-0001` with 10 schema fields and 14 quality rules.
 
-The detailed evidence is available in:
-
-- [Gemini2 Complete Governed Example Run](https://github.com/neeleshkalani/DataSteward/blob/main/docs/GEMINI2_CLEAN_EXAMPLE_RUN.md)—the readable chronological narrative; and
-- [Actual Agent Prompt, Input and Output Transcript](https://github.com/neeleshkalani/DataSteward/blob/main/docs/GEMINI2_ACTUAL_AGENT_TRANSCRIPT.md)—reconstructed complete prompts plus exact persisted sanitized inputs and typed outputs for every successful Agent call.
+The working prototype retains a readable chronological run narrative and a detailed transcript containing reconstructed complete prompts plus exact persisted sanitized inputs and typed outputs for every successful Agent call. These materials can be reviewed as part of a walkthrough or source-access discussion.
 
 This is evidence from one workflow trajectory, not a benchmark of Gemini quality.
 
@@ -372,13 +368,11 @@ Organizations can begin with recommendation-only assistance and increase autonom
 
 No multi-agent framework was added merely to claim framework usage. Explicit orchestration keeps authority and failure behavior inspectable. In a production target state, Temporal could provide durable long-running workflow execution, while LangGraph could support bounded dynamic reasoning inside an individual stage without replacing the enterprise control plane.
 
-## 16. Run the project
+## 16. Demonstration path and source access
 
-On Windows PowerShell:
+The executable prototype is maintained separately. A walkthrough or source access can be provided on request. With source access, it runs on Windows PowerShell using:
 
 ```powershell
-git clone https://github.com/neeleshkalani/DataSteward.git
-cd DataSteward
 .\scripts\setup.ps1
 .\scripts\test.ps1
 .\scripts\run.ps1
@@ -396,7 +390,7 @@ Recommended walkthrough:
 6. approve Assessment, Contract and Publication versions; and
 7. publish through governed MCP and inspect Governance evidence.
 
-See the [Project End-to-End Guide](https://github.com/neeleshkalani/DataSteward/blob/main/docs/PROJECT_END_TO_END_GUIDE.md) and [Run and Test Guide](https://github.com/neeleshkalani/DataSteward/blob/main/docs/RUN_AND_TEST.md) for the full path.
+The source package includes a detailed end-to-end guide, exact run and test instructions, control-plane documentation, capability boundaries and the preserved live-run evidence.
 
 ## 17. Repository map
 
@@ -473,12 +467,7 @@ A useful Data Stewardship Agent must interpret quality evidence, classification 
 ## Further reading
 
 - [Enterprise Agentic Workflows index](README.md)
-- [DataSteward documentation index](https://github.com/neeleshkalani/DataSteward/blob/main/docs/README.md)
-- [Project End-to-End Guide](https://github.com/neeleshkalani/DataSteward/blob/main/docs/PROJECT_END_TO_END_GUIDE.md)
-- [Control Plane Implementation](https://github.com/neeleshkalani/DataSteward/blob/main/docs/CONTROL_PLANE_IMPLEMENTATION.md)
-- [Capability Matrix](https://github.com/neeleshkalani/DataSteward/blob/main/docs/CAPABILITY_MATRIX.md)
-- [Production Roadmap and Target Operating Model](https://github.com/neeleshkalani/DataSteward/blob/main/docs/ROADMAP_AND_TOM.md)
-- [Gemini2 Complete Governed Example Run](https://github.com/neeleshkalani/DataSteward/blob/main/docs/GEMINI2_CLEAN_EXAMPLE_RUN.md)
+- [Media Buying Agentic Workflow Reference Implementation](media-buying-agentic-workflow-reference-implementation.md)
 
 ## Disclaimer
 
