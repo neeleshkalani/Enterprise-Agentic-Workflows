@@ -39,7 +39,7 @@ In short, this prototype demonstrates how enterprise data onboarding can use AI 
 - [Enterprise target state](#13-enterprise-target-state-and-production-scale)
 - [Enterprise value](#14-enterprise-value)
 - [Technology choices](#15-technology-choices)
-- [Demonstration path and source access](#16-demonstration-path-and-source-access)
+- [Demonstration availability](#16-demonstration-availability)
 - [Repository map](#17-repository-map)
 - [Engineering decisions](#18-engineering-decisions-and-trade-offs)
 - [What the project demonstrates](#19-what-this-project-demonstrates)
@@ -281,7 +281,7 @@ After Human approval, the bounded plan performs:
 
 Every request, response, status, duration and error is persisted. No enterprise catalog is contacted, and no production data product is created.
 
-This clean boundary allows the prototype to demonstrate real tool governance without pretending to possess an enterprise integration.
+This clean boundary allows the prototype to demonstrate real tool-governance behavior without claiming integration with a live enterprise catalog.
 
 ## 12. Live, deterministic, simulated and future boundaries
 
@@ -370,29 +370,22 @@ Organizations can begin with recommendation-only assistance and increase autonom
 
 No multi-agent framework was added merely to claim framework usage. Explicit orchestration keeps authority and failure behavior inspectable. In a production target state, Temporal could provide durable long-running workflow execution, while LangGraph could support bounded dynamic reasoning inside an individual stage without replacing the enterprise control plane.
 
-## 16. Demonstration path and source access
+## 16. Demonstration availability
 
-The executable prototype is maintained separately. A walkthrough or source access can be provided on request. With source access, it runs on Windows PowerShell using:
+The working prototype is maintained separately from this public reference.
 
-```powershell
-.\scripts\setup.ps1
-.\scripts\test.ps1
-.\scripts\run.ps1
-```
+This article documents the workflow design, architecture, control-plane implementation, evaluation approach, technology choices, and enterprise target-state pattern. A walkthrough or source access can be provided on request.
 
-Deterministic mock mode requires no model credentials. Live Gemini mode uses local `.env` configuration; `.env` is not committed.
+A typical demonstration follows this path:
 
-Recommended walkthrough:
-
-1. create a Legal Entity product with the problematic sample;
-2. run Intake and answer the clarification questions;
-3. assess the data and inspect deterministic facts separately from Agent recommendations;
-4. provide the revised sample to show that partial remediation still blocks progression;
-5. provide the unknown-column sample and approve a product-policy decision;
-6. approve Assessment, Contract and Publication versions; and
-7. publish through governed MCP and inspect Governance evidence.
-
-The source package includes a detailed end-to-end guide, exact run and test instructions, control-plane documentation, capability boundaries and the preserved live-run evidence.
+1. create a Legal Entity product with a problematic synthetic dataset;
+2. run Intake and answer bounded clarification questions;
+3. assess deterministic data facts separately from Agent recommendations;
+4. provide a revised dataset version to show partial remediation and blocked progression;
+5. provide a later dataset version with an unfamiliar field;
+6. approve a product-policy decision with mapping and quality rules;
+7. approve Assessment, Contract, and Publication versions; and
+8. publish through governed MCP into a simulated catalog and inspect governance evidence.
 
 ## 17. Repository map
 
