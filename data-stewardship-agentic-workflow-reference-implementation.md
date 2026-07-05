@@ -30,7 +30,7 @@ In short, this prototype demonstrates how enterprise data onboarding can use AI 
 - [Deterministic facts and Agent reasoning](#7-deterministic-facts-versus-agent-reasoning)
 - [Typed artifacts and policy](#8-typed-artifacts-and-policy-packs)
 - [Evaluation](#9-evaluation-strategy)
-- [Real governed run](#10-a-real-governed-run)
+- [Governed workflow validation](#10-governed-workflow-validation)
 - [Governed MCP publication](#11-governed-mcp-publication)
 - [Capability boundaries](#12-live-deterministic-simulated-and-future-boundaries)
 
@@ -248,9 +248,9 @@ Current rule-based indicators are described as control-completeness or consisten
 
 ![Current and future evaluation approach](assets/data_steward_evaluation_evolution.svg)
 
-## 10. A real governed run
+## 10. Governed workflow validation
 
-The repository contains a complete July 2026 live Gemini run using synthetic Legal Entity data.
+The prototype was validated through a complete July 2026 live Gemini run using synthetic Legal Entity data.
 
 The trajectory demonstrated:
 
@@ -263,9 +263,9 @@ The trajectory demonstrated:
 7. primary-model timeouts and successful fallback-model attempts without losing workflow state; and
 8. five successful governed MCP operations that created and published simulated draft `SIM-0001` with 10 schema fields and 14 quality rules.
 
-The working prototype retains a readable chronological run narrative and a detailed transcript containing reconstructed complete prompts plus exact persisted sanitized inputs and typed outputs for every successful Agent call. These materials can be reviewed as part of a walkthrough or source-access discussion.
+The working prototype retains a readable chronological run narrative and a detailed transcript containing reconstructed complete prompts, sanitized inputs, and typed outputs for every successful Agent call. These materials can be reviewed as part of a walkthrough or source-access discussion.
 
-This is evidence from one workflow trajectory, not a benchmark of Gemini quality.
+This validation demonstrates one controlled workflow trajectory using synthetic data. It is not a benchmark of Gemini quality, not a production-readiness claim, and not evidence of integration with a live enterprise catalog.
 
 ## 11. Governed MCP publication
 
