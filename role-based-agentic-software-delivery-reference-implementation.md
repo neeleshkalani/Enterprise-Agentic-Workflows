@@ -154,27 +154,6 @@ The agent design mirrors the discipline of mature software delivery processes â
 
 > **How to read this visual:** Read left to right: the feature request becomes structured delivery work, specialist Agents produce and review artifacts, Human checkpoints can govern key decisions, and the workflow ends only when implementation and verification evidence are complete.
 
-The editable Mermaid source below captures the same flow.
-
-```mermaid
-flowchart TD
-    A[Feature Contract] --> B[Phase 1: Analyst Agent<br/>User stories, acceptance criteria, requirements artifact]
-    B --> C{Human validates<br/>business intent and ACs?}
-    C -->|Approved| D[Phase 2: Architect Agent<br/>ERD, class diagram, API contract]
-    C -->|Revise| B
-    D --> E{Human approves<br/>data model and API design?}
-    E -->|Approved| F[Phase 3: Lead Developer Agent<br/>Architecture review]
-    E -->|Revise| D
-    F -->|Reject| D
-    F -->|Approved| G[Phase 4: Developer Agent<br/>Full implementation across layers]
-    G --> H[Phase 5: Lead Developer Agent<br/>Code review]
-    H -->|Reject| G
-    H -->|Approved| I{Human validates<br/>implementation quality and security?}
-    I -->|Approved| J[Phase 6: QA Agent<br/>Integration tests and AC traceability]
-    I -->|Revise| G
-    J -->|Tests fail| G
-    J -->|Tests pass| K[Feature complete<br/>Completion report and committed artifacts]
-```
 
 The same pipeline can run in two modes:
 
@@ -365,5 +344,4 @@ Agent behaviour that deviates from expected output is a signal, not just an erro
 ---
 
 *Interested in the agent definitions, instruction files, skill modules, or implementation guidance? Feel free to connect and reach out.*
-
 
