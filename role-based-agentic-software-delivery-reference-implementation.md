@@ -346,8 +346,9 @@ Agent behaviour that deviates from expected output is a signal, not just an erro
 
 ## Further Reading
 
-- [Architecting AI Across the Software Development Lifecycle](https://www.linkedin.com/pulse/architecting-ai-across-software-development-lifecycle-neelesh-kalani) — The design principles, governance model, and strategic framing behind this pattern
-- [I Underestimated Agentic Workflows. Repeatedly.](https://www.linkedin.com/pulse/i-underestimated-agentic-workflows-repeatedly-neelesh-kalani-y2mtc/) — Lessons on the control plane for enterprise agentic workflows
+- [Enterprise Agentic Workflows index](README.md)
+- [Media Buying Agentic Workflow Reference Implementation](media-buying-agentic-workflow-reference-implementation.md)
+- [Data Stewardship Agentic Workflow Reference Implementation](data-stewardship-agentic-workflow-reference-implementation.md)
 
 ---
 

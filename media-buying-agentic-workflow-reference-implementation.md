@@ -640,3 +640,4 @@ failure, and evidence.
 
 - [Enterprise Agentic Workflows index](README.md)
 - [Data Stewardship Agentic Workflow Reference Implementation](data-stewardship-agentic-workflow-reference-implementation.md)
+- [Role-Based Agentic Software Delivery Reference Implementation](role-based-agentic-software-delivery-reference-implementation.md)

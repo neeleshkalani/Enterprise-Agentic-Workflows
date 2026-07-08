@@ -485,6 +485,7 @@ A useful Data Stewardship Agent must interpret quality evidence, classification 
 
 - [Enterprise Agentic Workflows index](README.md)
 - [Media Buying Agentic Workflow Reference Implementation](media-buying-agentic-workflow-reference-implementation.md)
+- [Role-Based Agentic Software Delivery Reference Implementation](role-based-agentic-software-delivery-reference-implementation.md)
 
 ## Disclaimer
 
