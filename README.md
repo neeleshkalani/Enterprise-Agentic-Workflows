@@ -25,7 +25,7 @@ These implementations explore how agentic workflows can be designed for enterpri
 
 ### Engineering workflow references
 
-- [Role-Based Agentic Software Delivery Reference Implementation](./role-based-agentic-software-delivery-reference-implementation.md) — governed engineering workflow showing how role-based AI Agents can assist software delivery while preserving human accountability, engineering controls, review gates, evaluation, observability, and auditability.
+- [AI-Assisted SDLC: Role-Based Agent Pattern for Software Delivery](./ai-assisted-sdlc-pattern.md) — governed engineering workflow showing how role-based AI Agents assist feature delivery across requirements, architecture, implementation, review and testing, including fully autonomous feature implementation capability with enterprise human check-ins where needed.
 
 ## Why This Repository
 
@@ -40,4 +40,4 @@ auditable, and suitable for enterprise adoption.
 
 ## Current Status
 
-This repository currently includes governed agentic reference implementations for Media Buying, Data Stewardship, and Role-Based Agentic Software Delivery. Additional workflows, architecture details, and implementation patterns will be added over time.
+This repository currently includes governed agentic reference implementations for Media Buying, Data Stewardship, and AI-Assisted SDLC / Role-Based Agentic Software Delivery. Additional workflows, architecture details, and implementation patterns will be added over time.
