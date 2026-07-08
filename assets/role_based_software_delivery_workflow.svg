@@ -1,0 +1,134 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1090" viewBox="0 0 1900 1090">
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#334155"/>
+    </marker>
+    <marker id="loopArrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#be123c"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg{fill:#f8fafc}.bar{fill:#334155}
+      .title{font:700 42px Arial,sans-serif;fill:#0f172a}.sub{font:400 21px Arial,sans-serif;fill:#475569}
+      .section{font:700 17px Arial,sans-serif;letter-spacing:.08em;fill:#334155}.note{font:400 15px Arial,sans-serif;fill:#334155}
+      .group{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;filter:url(#shadow)}.modeGroup{fill:#f1f5f9;stroke:#cbd5e1;stroke-width:2}
+      .label{font:700 18px Arial,sans-serif;fill:#0f172a}.white{font:700 18px Arial,sans-serif;fill:#fff}
+      .small{font:400 14px Arial,sans-serif;fill:#475569}.smallWhite{font:400 14px Arial,sans-serif;fill:#dbeafe}
+      .entry{fill:#111827;stroke:#111827;stroke-width:2;filter:url(#shadow)}.orch{fill:#1e40af;stroke:#1d4ed8;stroke-width:3;filter:url(#shadow)}
+      .agent{fill:#e0f2fe;stroke:#0284c7;stroke-width:3;filter:url(#shadow)}.review{fill:#fff7ed;stroke:#f97316;stroke-width:3;filter:url(#shadow)}
+      .qa{fill:#ede9fe;stroke:#7c3aed;stroke-width:3;filter:url(#shadow)}.done{fill:#dcfce7;stroke:#16a34a;stroke-width:3;filter:url(#shadow)}
+      .gate{fill:#ffffff;stroke:#94a3b8;stroke-width:2;filter:url(#shadow)}.gateText{font:700 13px Arial,sans-serif;fill:#334155}
+      .arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}.loop{stroke:#be123c;stroke-width:3;fill:none;stroke-dasharray:8 7;marker-end:url(#loopArrow)}
+      .connector{stroke:#cbd5e1;stroke-width:2;fill:none}.loopText{font:700 13px Arial,sans-serif;fill:#9f1239}
+      .mode{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;filter:url(#shadow)}.modeTitle{font:700 18px Arial,sans-serif;fill:#0f172a}.modeText{font:400 14px Arial,sans-serif;fill:#475569}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1900" height="1090"/>
+  <rect class="bar" width="18" height="1090"/>
+
+  <text x="70" y="70" class="title">Role-Based Agentic Software Delivery Workflow</text>
+  <text x="70" y="108" class="sub">Feature intent becomes a contract, the Orchestrator routes the lifecycle, and specialist Agents produce traceable delivery artifacts.</text>
+
+  <text x="70" y="165" class="section">ENTRY AND ORCHESTRATION</text>
+  <rect x="260" y="190" width="285" height="112" rx="20" class="entry"/>
+  <text x="295" y="235" class="white">Feature Contract</text>
+  <text x="295" y="265" class="smallWhite">Intent ? rules ? constraints ? scope</text>
+  <path class="arrow" d="M545 246 L640 246"/>
+  <rect x="640" y="190" width="305" height="112" rx="20" class="orch"/>
+  <text x="675" y="235" class="white">Orchestrator Agent</text>
+  <text x="675" y="265" class="smallWhite">Routes each specialist Agent</text>
+
+  <path class="arrow" d="M792 302 L792 348"/>
+  <text x="820" y="330" class="small">starts the SDLC workflow</text>
+
+  <!-- SDLC group -->
+  <rect x="70" y="350" width="1760" height="455" rx="28" class="group"/>
+  <text x="105" y="392" class="section">ROLE-BASED SDLC WORKFLOW</text>
+
+  <rect x="105" y="430" width="185" height="105" rx="18" class="agent"/>
+  <text x="135" y="471" class="label">Analyst Agent</text>
+  <text x="135" y="500" class="small">Stories ? ACs</text>
+  <path class="arrow" d="M290 483 L345 483"/>
+
+  <rect x="345" y="430" width="185" height="105" rx="18" class="agent"/>
+  <text x="375" y="471" class="label">Architect Agent</text>
+  <text x="375" y="500" class="small">ERD ? API ? model</text>
+  <path class="arrow" d="M530 483 L585 483"/>
+
+  <rect x="585" y="430" width="205" height="105" rx="18" class="review"/>
+  <text x="615" y="471" class="label">Lead Developer</text>
+  <text x="615" y="495" class="label">Design Review</text>
+  <path class="arrow" d="M790 483 L845 483"/>
+
+  <rect x="845" y="430" width="185" height="105" rx="18" class="agent"/>
+  <text x="875" y="471" class="label">Developer Agent</text>
+  <text x="875" y="500" class="small">Implements feature</text>
+  <path class="arrow" d="M1030 483 L1085 483"/>
+
+  <rect x="1085" y="430" width="205" height="105" rx="18" class="review"/>
+  <text x="1115" y="471" class="label">Lead Developer</text>
+  <text x="1115" y="495" class="label">Code Review</text>
+  <path class="arrow" d="M1290 483 L1345 483"/>
+
+  <rect x="1345" y="430" width="185" height="105" rx="18" class="qa"/>
+  <text x="1375" y="471" class="label">QA Agent</text>
+  <text x="1375" y="500" class="small">Tests and traceability</text>
+  <path class="arrow" d="M1530 483 L1585 483"/>
+
+  <rect x="1585" y="430" width="210" height="105" rx="18" class="done"/>
+  <text x="1615" y="471" class="label">Feature Complete</text>
+  <text x="1615" y="500" class="small">Evidence committed</text>
+
+  <!-- revision lane inside group -->
+  <path class="loop" d="M615 535 L615 558 L470 558 L470 535"/>
+  <text x="485" y="586" class="loopText">Design review: back to Architect</text>
+  <path class="loop" d="M1190 535 L1190 590 L938 590 L938 535"/>
+  <text x="960" y="608" class="loopText">Code review: back to Developer</text>
+  <path class="loop" d="M1438 535 L1438 620 L938 620 L938 535"/>
+  <text x="960" y="648" class="loopText">QA failure: back to Developer</text>
+
+  <text x="105" y="672" class="section">HUMAN</text>
+  <text x="105" y="692" class="section">CHECKPOINTS</text>
+  <!-- human gates within SDLC group, aligned under stages -->
+  <path class="connector" d="M198 535 L198 697"/>
+  <rect x="105" y="705" width="185" height="75" rx="14" class="gate"/>
+  <text x="135" y="736" class="gateText">Intent check</text>
+  <text x="135" y="758" class="small">business intent and ACs</text>
+
+  <path class="connector" d="M438 535 L438 697"/>
+  <rect x="345" y="705" width="185" height="75" rx="14" class="gate"/>
+  <text x="375" y="736" class="gateText">Architecture check</text>
+  <text x="375" y="758" class="small">model, API, standards</text>
+
+  <path class="connector" d="M688 535 L688 697"/>
+  <rect x="585" y="705" width="205" height="75" rx="14" class="gate"/>
+  <text x="615" y="736" class="gateText">Design approval</text>
+  <text x="615" y="758" class="small">proceed to implementation</text>
+
+  <path class="connector" d="M1188 535 L1188 697"/>
+  <rect x="1085" y="705" width="205" height="75" rx="14" class="gate"/>
+  <text x="1115" y="736" class="gateText">Implementation check</text>
+  <text x="1115" y="758" class="small">quality and security</text>
+
+  <path class="connector" d="M1438 535 L1438 697"/>
+  <rect x="1345" y="705" width="185" height="75" rx="14" class="gate"/>
+  <text x="1375" y="736" class="gateText">Test evidence check</text>
+  <text x="1375" y="758" class="small">coverage and traceability</text>
+
+  <!-- modes group -->
+  <text x="70" y="830" class="section">TWO OPERATING MODES</text>
+  <rect x="70" y="857" width="1760" height="145" rx="26" class="modeGroup"/>
+
+  <rect x="105" y="887" width="800" height="85" rx="18" class="mode"/>
+  <text x="135" y="920" class="modeTitle">Governed delivery</text>
+  <text x="135" y="948" class="modeText">Human checkpoints are active for consequential decisions before acceptance, merge, release, or production operation.</text>
+
+  <rect x="965" y="887" width="830" height="85" rx="18" class="mode"/>
+  <text x="995" y="920" class="modeTitle">Autonomous feature implementation</text>
+  <text x="995" y="948" class="modeText">The Orchestrator runs the same SDLC workflow from one feature contract with no manual handoffs between specialist Agents.</text>
+
+  <text x="70" y="1023" class="note">Reference implementation boundary: autonomous feature implementation is demonstrated; enterprise acceptance, merge, release and production operation remain governance decisions.</text>
+</svg>
