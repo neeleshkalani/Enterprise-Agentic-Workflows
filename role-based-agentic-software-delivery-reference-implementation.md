@@ -4,7 +4,7 @@
 
 This reference documents an implemented engineering workflow where role-based AI Agents assist software delivery across requirements, architecture, implementation, testing, security review and release readiness.
 
-The implementation is capable of fully autonomous delivery for small, well-scoped changes. In one demonstrated run, the system implemented a versioning feature autonomously in about 20 minutes, including code changes, supporting updates and verification evidence.
+The implementation is capable of fully autonomous delivery for bounded, clearly defined changes. In one demonstrated run, the system implemented a versioning feature autonomously in about 20 minutes, including code changes, supporting updates and verification evidence.
 
 That capability does not remove the need for human accountability. For enterprise delivery, human check-ins remain vital because people must review requirements, architecture, diagrams, security implications, code quality, test evidence, operational readiness and production risk.
 
@@ -25,7 +25,7 @@ The pattern shows how autonomous engineering work can be placed inside an accoun
 - Security / Risk Agent for threat modeling, dependency risk and secure coding review.
 - Release / Operations Agent for deployment readiness, rollback planning and operational evidence.
 - Engineering control plane for workflow state, approvals, policy checks, evaluation, observability and audit.
-- Fully autonomous implementation path for small, scoped changes, demonstrated with an autonomously implemented versioning feature in about 20 minutes.
+- Fully autonomous implementation path for bounded, clearly defined changes, demonstrated with an autonomously implemented versioning feature in about 20 minutes.
 
 ## Boundary
 
