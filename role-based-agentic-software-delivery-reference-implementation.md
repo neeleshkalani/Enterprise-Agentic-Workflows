@@ -255,7 +255,7 @@ The pipeline was used across two distinct phases of a real Java Spring Boot ente
 
 ### Phase 1 — AI-Assisted Engineering: The Broader Platform
 
-The full document management platform was built using AI-assisted engineering with human review at every stage. The system is production-grade, covering:
+The full document management platform was built using AI-assisted engineering with human review at every stage. The system is covering:
 
 - Document ingestion — upload, text extraction via Apache Tika, SHA-256 integrity hashing
 - Full-text search — across metadata and document content, 30+ file formats

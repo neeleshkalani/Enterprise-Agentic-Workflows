@@ -25,7 +25,7 @@ These implementations explore how agentic workflows can be designed for enterpri
 
 ### Engineering workflow references
 
-- [Role-Based Agentic Software Delivery Reference Implementation](./role-based-agentic-software-delivery-reference-implementation.md) — governed engineering workflow showing how role-based AI Agents assist feature delivery across requirements, architecture, implementation, review and testing, including fully autonomous feature implementation capability with enterprise human check-ins where needed.
+- [Role-Based Agentic Software Delivery Reference Implementation](./role-based-agentic-software-delivery-reference-implementation.md) — governed engineering workflow showing how specialist role-based Agents assist feature delivery across requirements, architecture, implementation, review, and testing, with traceability, human decision gates, and an autonomous-orchestrator capability validated in a controlled engineering scenario.
 
 ## Why This Repository
 
