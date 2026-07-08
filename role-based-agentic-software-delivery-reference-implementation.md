@@ -28,7 +28,6 @@ The result is a working pipeline. It combines specialist agents with explicit wo
 - [The Living Requirements Artifact](#the-living-requirements-artifact)
 - [The Self-Improvement Loop](#the-self-improvement-loop)
 - [Real-World Example](#real-world-example)
-- [Implemented and Out-of-Scope Boundaries](#implemented-and-out-of-scope-boundaries)
 - [Key Design Decisions](#key-design-decisions)
 - [Further Reading](#further-reading)
 
@@ -151,55 +150,34 @@ The agent design mirrors the discipline of mature software delivery processes �
 
 ## The Six-Phase Workflow
 
-```
-┌─────────────────────────────────┐
-│        Feature Contract         │
-│         (entry point)           │
-└────────────────┬────────────────┘
-                 │
-    ┌────────────▼────────────┐
-    │  Phase 1: Analyst Agent │
-    │  User stories + ACs     │
-    │  Requirements Artifact  │
-    └────────────┬────────────┘
-                 │  ✅ Human validates business intent and ACs before architecture begins
-    ┌────────────▼────────────┐
-    │ Phase 2: Architect Agent│
-    │  ERD + Class Diagram    │
-    │  + API Contract         │
-    └────────────┬────────────┘
-                 │  ✅ Human approves data model and API design before any code is written
-    ┌────────────▼──────────────────┐
-    │ Phase 3: Lead Developer Agent │
-    │ Architecture Review           │◄── Reject: back to Architect
-    └────────────┬──────────────────┘
-                 │  ✅ Human confirms architectural standards are met before implementation begins
-            Approved
-    ┌────────────▼────────────┐
-    │ Phase 4: Developer Agent│
-    │  Full Implementation    │
-    │  All architectural layers│
-    └────────────┬────────────┘
-    ┌────────────▼──────────────────┐
-    │ Phase 5: Lead Developer Agent │
-    │ Code Review                   │◄── Reject: back to Developer
-    └────────────┬──────────────────┘
-                 │  ✅ Human validates implementation quality and security before testing begins
-            Approved
-    ┌────────────▼────────────┐
-    │   Phase 6: QA Agent     │
-    │  Integration Tests      │
-    │  AC Coverage Table      │◄── Fail: back to Developer
-    └────────────┬────────────┘
-                 │
-    ┌────────────▼────────────┐
-    │   ✅ Feature Complete    │
-    │   Completion Report     │
-    │   All artifacts committed│
-    └─────────────────────────┘
+```mermaid
+flowchart TD
+    A[Feature Contract] --> B[Phase 1: Analyst Agent<br/>User stories, acceptance criteria, requirements artifact]
+    B --> C{Human validates<br/>business intent and ACs?}
+    C -->|Approved| D[Phase 2: Architect Agent<br/>ERD, class diagram, API contract]
+    C -->|Revise| B
+    D --> E{Human approves<br/>data model and API design?}
+    E -->|Approved| F[Phase 3: Lead Developer Agent<br/>Architecture review]
+    E -->|Revise| D
+    F -->|Reject| D
+    F -->|Approved| G[Phase 4: Developer Agent<br/>Full implementation across layers]
+    G --> H[Phase 5: Lead Developer Agent<br/>Code review]
+    H -->|Reject| G
+    H -->|Approved| I{Human validates<br/>implementation quality and security?}
+    I -->|Approved| J[Phase 6: QA Agent<br/>Integration tests and AC traceability]
+    I -->|Revise| G
+    J -->|Tests fail| G
+    J -->|Tests pass| K[Feature complete<br/>Completion report and committed artifacts]
 ```
 
-The pipeline is capable of fully autonomous feature implementation. In enterprise delivery, human check-ins remain vital at consequential stages because people must review business intent, architecture, security implications, code quality, test evidence, operational readiness and production risk.
+The same pipeline can run in two modes:
+
+| Mode | How it works |
+|---|---|
+| Governed delivery | Human check-ins occur at consequential stages such as business-intent validation, architecture approval, implementation review, security review, test evidence review and release readiness. |
+| Fully autonomous feature implementation | The Orchestrator Agent drives the complete six-phase lifecycle from a single feature contract without manual handoffs between agents. |
+
+The pipeline is capable of fully autonomous feature implementation. In enterprise delivery, human check-ins remain vital at consequential stages because people must review business intent, architecture, security implications, code quality, test evidence, operational readiness and production risk before accepting, merging, releasing or operating the work.
 
 > **The AI proposes. The engineer decides.**
 
@@ -342,26 +320,6 @@ In a governed production workflow, human review at each gate is the recommended 
 
 ---
 
-## Implemented and Out-of-Scope Boundaries
-
-| Capability | Status |
-|-----------|--------|
-| Six specialist agents with constrained roles | Implemented |
-| Orchestrator Agent routing work sequentially | Implemented |
-| Structured feature contract as pipeline entry point | Implemented |
-| Living requirements artifact persisted to repository | Implemented |
-| Human review gates between consequential phases | Implemented |
-| Rejection paths back to earlier phases | Implemented |
-| Instruction files applied automatically by context | Implemented |
-| Skill modules loaded on demand by agent role | Implemented |
-| Traceability matrix from AC to test method | Implemented |
-| Self-improvement loop from execution gaps | Implemented |
-| Autonomous feature delivery without human review | Out of scope by design |
-| Production deployment without human authorisation | Out of scope by design |
-| Replacement of engineering judgment | Out of scope by design |
-
----
-
 ## Key Design Decisions
 
 ### Why specialist agents rather than one general assistant?
@@ -376,9 +334,9 @@ The quality of downstream artifacts is directly tied to the quality of the initi
 
 Requirements that exist only in conversational context disappear when the session ends. Treating the requirements artifact as a first-class repository artifact ensures every agent works from the same baseline, creates an auditable chain from requirement to delivery, and allows the system to evolve in a controlled and traceable way.
 
-### Why human gates rather than full automation?
+### Why human gates if the pipeline can operate autonomously?
 
-The pipeline can operate autonomously. Best practice is not to let it. Human review at each consequential gate is what keeps requirements honest, architecture sound, implementation aligned, and quality validated against original intent — not against what happened to be built.
+The pipeline can operate autonomously for feature implementation. In enterprise delivery, human gates are recommended for consequential decisions such as requirements acceptance, architecture approval, security review, merge approval and production release. Human review keeps requirements honest, architecture sound, implementation aligned, and quality validated against original intent - not only against what happened to be built.
 
 ### Why a self-improvement loop?
 
