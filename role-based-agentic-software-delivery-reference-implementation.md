@@ -247,22 +247,21 @@ The pipeline evolves in the same way mature engineering organisations evolve —
 
 ## Real-World Example
 
-### Enterprise Document Management System
+### Enterprise Document Management reference implementation
 
-The pipeline was used across two distinct phases of a real Java Spring Boot enterprise document management system — first as AI-assisted engineering throughout the broader platform build, then as a fully autonomous pipeline run to validate the orchestrator's end-to-end capability.
+The pipeline was applied to a Java Spring Boot enterprise document-management reference implementation in two phases - first as AI-assisted engineering throughout the broader platform build, then as a fully autonomous pipeline run to validate the orchestrator's end-to-end capability.
 
 ---
 
-### Phase 1 — AI-Assisted Engineering: The Broader Platform
+### Phase 1 - AI-Assisted Engineering: The Broader Reference Implementation
 
-The full document management platform was built using AI-assisted engineering with human review at every stage. The system is covering:
+The document-management reference implementation was built using AI-assisted engineering with human review at every stage. The implementation covers:
 
-- Document ingestion — upload, text extraction via Apache Tika, SHA-256 integrity hashing
-- Full-text search — across metadata and document content, 30+ file formats
-- Retention management — configurable policies, automated scheduled purge, retention lock for legal holds
-- Audit trail — every operation logged with user, timestamp, and correlation ID
-- Security — JWT authentication, role-based access, stateless session management
-- Dual storage — filesystem and AWS S3 with SAML authentication, seamless switching via configuration
+- Document ingestion and metadata capture
+- Search across document metadata and extracted content
+- Retention management and legal-hold handling
+- Audit trail for document and version operations
+- Configurable storage integration
 
 **Platform statistics:**
 
@@ -286,13 +285,13 @@ With the platform established and architecture conventions in place, the Orchest
 **Purpose:** To validate that the Orchestrator Agent could drive the complete six-phase pipeline from a single feature contract, calling each specialist agent in sequence, passing structured outputs between phases, and producing a complete, tested, committed feature without manual handoffs.
 
 **Feature scope:**
-- Upload new document versions with change summary
-- Retrieve complete version history, newest-first
-- Download any historical version binary
-- Rollback to a previous version — creates a new version at the top of history, preserving immutable history
-- Duplicate content detection via SHA-256 — rejects identical uploads
-- Retention policy inheritance applied to individual versions
-- Full audit trail for every version operation
+- Upload and describe new document versions
+- Retrieve version history
+- Download historical versions
+- Roll back to a previous version while preserving history
+- Detect duplicate version content
+- Apply retention handling to document versions
+- Record version activity in the audit trail
 
 **Result:**
 
