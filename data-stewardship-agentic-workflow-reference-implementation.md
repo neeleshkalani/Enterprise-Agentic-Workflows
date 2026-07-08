@@ -252,20 +252,6 @@ Current rule-based indicators are described as control-completeness or consisten
 
 ![Current and future evaluation approach](assets/data_steward_evaluation_evolution.svg)
 
-### Evaluation maturity needed for production
-
-A production evaluation program would extend today's deterministic consistency checks with:
-
-1. versioned reference datasets representing multiple domains, source patterns, schema changes, quality failures and difficult edge cases;
-2. expert-labelled rubrics for domain interpretation, critical-data identification, classification, remediation practicality, contract quality and publication readiness;
-3. calibrated model-based judges for selected qualitative dimensions, continuously compared with Human expert labels;
-4. workflow-trajectory tests covering clarification, remediation loops, revisions, approvals, invalidation, retries, fallback and partial tool failure;
-5. adversarial tests for prompt injection, policy bypass, sensitive-data exposure, unsupported mappings, malicious metadata and unsafe tool requests;
-6. regression gates for changes to prompts, models, domain policies, evaluators, tools and orchestration code; and
-7. production outcome measures such as reviewer acceptance, edit distance, onboarding cycle time, escaped quality defects, overrides, exceptions, incidents and data-product adoption.
-
-These evaluation layers should remain distinct. Structural consistency, expert-assessed recommendation quality, workflow behavior and production outcomes answer different questions and should not be collapsed into one generic Agent score.
-
 ## 10. Governed workflow validation
 
 The prototype was validated through a complete July 2026 live Gemini run using synthetic Legal Entity data.
@@ -349,6 +335,22 @@ Warehouse, lakehouse, database, stream or API
 Gemini should not scan millions of rows. Snowflake, Databricks, BigQuery, Spark or an enterprise data-quality platform should calculate facts at scale. The model should receive compact aggregates, failed-rule summaries, schema changes, approved metadata, redacted examples where policy allows and governed evidence references.
 
 For thousands of columns, the control plane would prioritize critical and changed columns, group fields by subject, batch context, allow governed evidence retrieval and combine typed recommendations.
+
+### Evaluation maturity needed for production
+
+The enterprise target state should separate evaluation into seven layers. These layers answer different questions and should not be collapsed into one generic Agent score.
+
+| Layer | Purpose | Status in the reference implementation |
+|---|---|---|
+| Layer 1: Schema and deterministic invariants | Prove basic facts and structural consistency: hashes, row and column counts, schema drift, field references, issue-code reconciliation and approved-rule preservation | Implemented today |
+| Layer 2: Reference-case offline evaluations | Run versioned datasets and expected outcomes across domains, source patterns, quality failures, schema changes and edge cases | Target-state |
+| Layer 3: Expert rubric scoring | Have domain experts score recommendation usefulness, critical-data identification, classification rationale, remediation practicality, contract quality and publication readiness | Target-state |
+| Layer 4: LLM-as-judge for qualitative dimensions | Use calibrated model judges for selected qualitative checks, continuously compared with expert labels and never treated as the sole authority | Target-state |
+| Layer 5: Workflow and trajectory evaluation | Assert that clarification, remediation, approval, revision, invalidation, retry, fallback and tool-governance paths happen in the permitted order | Partially implemented today through workflow tests, audit records and the live-run trajectory; broader suite is target-state |
+| Layer 6: Safety, security and adversarial evaluation | Test prompt injection, policy bypass, sensitive-data exposure, unsupported mappings, malicious metadata and unsafe tool requests | Target-state |
+| Layer 7: Online production outcome evaluation | Measure reviewer acceptance, edit distance, onboarding cycle time, escaped defects, overrides, exceptions, incidents, reuse and data-product adoption | Target-state |
+
+The current implementation mainly demonstrates Layer 1 plus selected Layer 5 behavior. Production confidence would require the remaining layers, CI regression gates and operational outcome measurement.
 
 ## 14. Enterprise value
 
