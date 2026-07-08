@@ -314,6 +314,8 @@ From feature contract submission to working, tested, committed code — requirem
 
 This was a capability validation run. The autonomous execution demonstrates what the orchestrator can drive end-to-end when architecture conventions, coding standards, and instruction files are in place.
 
+A post-run review converted observed gaps into agent-instruction and quality-gate improvements, including documentation-update rules, Mermaid syntax guidance, broader review instructions and stronger retention test coverage.
+
 In a governed production workflow, human review at each gate is the recommended practice — and intentionally extends the total elapsed time. The autonomous capability and the governed model are not in tension. The pipeline supports both. The choice of where to place human gates is an engineering and risk decision for each organisation.
 
 **The AI proposes. The engineer decides. Or — when validated — the pipeline delivers.**
