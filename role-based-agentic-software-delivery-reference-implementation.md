@@ -1,6 +1,8 @@
-# AI-Assisted SDLC: Role-Based Agent Pattern for Software Delivery
+# Role-Based Agentic Software Delivery Reference Implementation
 
 ## From Feature Prompt to Tested, Traceable Code
+
+A governed engineering workflow showing how role-based AI Agents assist software delivery while preserving human accountability, engineering controls, review gates and auditability.
 
 Engineering teams are adopting AI coding assistants at pace. The harder question is not whether AI can write code. It is whether AI participation in software delivery can be structured, governed, and traceable in the same way mature engineering organisations structure, govern, and trace the work itself.
 
