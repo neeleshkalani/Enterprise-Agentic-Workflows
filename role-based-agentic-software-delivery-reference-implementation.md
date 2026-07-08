@@ -2,22 +2,33 @@
 
 ## A governed engineering workflow showing how role-based AI Agents can assist software delivery while preserving human accountability, engineering controls, review gates and auditability
 
-This reference is planned as an engineering-workflow companion to the business-workflow references in this repository.
+This reference documents an implemented engineering workflow where role-based AI Agents assist software delivery across requirements, architecture, implementation, testing, security review and release readiness.
 
-The intended pattern is to show how role-based software delivery Agents can assist across the SDLC without replacing engineering ownership, architecture review, security review, testing discipline, release approval or production accountability.
+The implementation is capable of fully autonomous delivery for small, well-scoped changes. In one demonstrated run, the system implemented a versioning feature autonomously in about 20 minutes, including code changes, supporting updates and verification evidence.
 
-## Planned scope
+That capability does not remove the need for human accountability. For enterprise delivery, human check-ins remain vital because people must review requirements, architecture, diagrams, security implications, code quality, test evidence, operational readiness and production risk.
+
+The key distinction is:
+
+```text
+Autonomous implementation capability ≠ unchecked enterprise production delivery
+```
+
+The pattern shows how autonomous engineering work can be placed inside an accountable software-delivery control plane.
+
+## Implemented workflow capabilities
 
 - Product Owner / Business Analyst Agent for requirements clarification and acceptance criteria.
 - Architect Agent for architecture options, trade-offs and technical decision records.
-- Developer Agent for implementation assistance, code changes and refactoring proposals.
+- Developer Agent for implementation assistance, code changes and refactoring.
 - Test Engineer Agent for test strategy, regression coverage and defect reproduction.
 - Security / Risk Agent for threat modeling, dependency risk and secure coding review.
 - Release / Operations Agent for deployment readiness, rollback planning and operational evidence.
 - Engineering control plane for workflow state, approvals, policy checks, evaluation, observability and audit.
+- Fully autonomous implementation path for small, scoped changes, demonstrated with an autonomously implemented versioning feature in about 20 minutes.
 
 ## Boundary
 
-The pattern should demonstrate AI-assisted software delivery, not autonomous production change. Agents prepare artifacts, analysis and recommendations. Human engineers, architects, security reviewers, product owners and release owners remain accountable for material decisions.
+The pattern demonstrates AI-assisted and, for bounded scopes, fully autonomous software implementation. The enterprise operating model should still preserve human accountability for material decisions, production promotion, architecture acceptance, security posture and release risk.
 
-This article will be expanded into a full reference implementation document.
+Agents can accelerate the work, prepare evidence and complete bounded implementation tasks. Human leaders and engineering controls remain responsible for deciding whether the work should be accepted, merged, released or operated in production.
