@@ -301,11 +301,16 @@ With the platform established and architecture conventions in place, the Orchest
 | Acceptance criteria | 19 |
 | Architecture artifacts | ERD + class diagram + API contract |
 | REST API endpoints implemented | 4 |
+| New files created | 9 |
+| Existing files modified | 5 |
+| Lines of code added | 1,071 |
 | Implementation files across all layers | 18 |
-| Integration tests | 135 |
+| New tests written during autonomous run | 24 |
+| Tests passing after autonomous run | 128/128 |
+| Tests passing after post-run review | 135/135 |
 | Test files | 21 |
 | Test coverage | 84% |
-| Requirements → code → test traceability | Complete |
+| Requirements-to-code-to-test traceability | Complete |
 
 **End-to-end autonomous execution time: 20 minutes.**
 
