@@ -1,4 +1,4 @@
-# Data Stewardship Agentic Workflow Reference Implementation
+﻿# Data Stewardship Agentic Workflow Reference Implementation
 
 ## Building an AI-assisted control plane for trustworthy enterprise data products
 
@@ -485,8 +485,10 @@ A useful Data Stewardship Agent must interpret quality evidence, classification 
 
 - [Enterprise Agentic Workflows index](README.md)
 - [Media Buying Agentic Workflow Reference Implementation](media-buying-agentic-workflow-reference-implementation.md)
+- [Data Product Marketplace Agentic Workflow Reference Implementation](data-product-marketplace-agentic-workflow-reference-implementation.md)
 - [Role-Based Agentic Software Delivery Reference Implementation](role-based-agentic-software-delivery-reference-implementation.md)
 
 ## Disclaimer
 
 All included datasets are synthetic. The Workbench is a local prototype, not a production data-governance platform. Enterprise identity, catalog, lineage, data-quality, MDM and distributed orchestration integrations are explicitly documented as future work.
+

@@ -1,4 +1,4 @@
-# Enterprise Agentic Workflows
+﻿# Enterprise Agentic Workflows
 
 This repository shares reference implementations for enterprise agentic workflows with orchestration, evaluation, governance, observability, and human-in-the-loop controls.
 
@@ -23,6 +23,8 @@ These implementations explore how agentic workflows can be designed for enterpri
 
 - [Data Stewardship Agentic Workflow Reference Implementation](./data-stewardship-agentic-workflow-reference-implementation.md) — governed AI-assisted data-product onboarding pattern with deterministic profiling, bounded specialist agents, typed artifacts, policy decisions, human approval, evaluation, and simulated MCP-based catalog publication.
 
+- [Data Product Marketplace Agentic Workflow Reference Implementation](./data-product-marketplace-agentic-workflow-reference-implementation.md) — governed marketplace discovery pattern extending data-product onboarding into semantic search, recommendation, curation, access requests, lineage explanation, feedback, and control-plane-governed MCP tool use.
+
 ### Engineering workflow references
 
 - [Role-Based Agentic Software Delivery Reference Implementation](./role-based-agentic-software-delivery-reference-implementation.md) — governed engineering workflow showing how specialist role-based Agents assist feature delivery across requirements, architecture, implementation, review, and testing, with traceability, human decision gates, and an autonomous-orchestrator capability validated in a controlled engineering scenario.
@@ -41,3 +43,4 @@ auditable, and suitable for enterprise adoption.
 ## Current Status
 
 This repository currently includes governed agentic reference implementations for Media Buying, Data Stewardship, and Role-Based Agentic Software Delivery. Additional workflows, architecture details, and implementation patterns will be added over time.
+
