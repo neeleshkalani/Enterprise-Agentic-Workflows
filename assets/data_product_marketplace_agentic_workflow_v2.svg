@@ -41,9 +41,10 @@
 
   <rect x="1050" y="195" width="260" height="120" rx="22" class="market"/>
   <circle cx="1282" cy="215" r="18" class="stepGreen"/><text x="1277" y="221" class="stepText">4</text>
-  <text x="1085" y="245" class="label">Data Product Marketplace</text>
-  <text x="1085" y="274" class="small">certified products listed</text>
-  <text x="1085" y="298" class="tiny">search, compare, request</text>
+  <text x="1180" y="238" class="label" text-anchor="middle">Data Product</text>
+  <text x="1180" y="262" class="label" text-anchor="middle">Marketplace</text>
+  <text x="1180" y="287" class="small" text-anchor="middle">certified products listed</text>
+  <text x="1180" y="308" class="tiny" text-anchor="middle">search, compare, request</text>
 
   <path class="flow" d="M320 255 L390 255"/>
   <path class="flow" d="M650 255 L720 255"/>
