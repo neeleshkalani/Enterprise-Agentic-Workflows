@@ -151,8 +151,10 @@
   <path class="flow" d="M1348 885 L1348 930"/>
   <path class="flow" d="M1595 885 L1595 930"/>
 
-  <path class="pink" d="M1638 930 C1638 1048 190 1048 190 315"/>
-  <text x="245" y="350" class="tiny">Feedback returns to stewardship / catalog governance</text>
-  <text x="520" y="1078" class="tiny">Feedback routes to Data Stewardship Workbench for remediation/version/policy changes, or to catalog owners/domain governance for documentation, ownership and listing issues.</text>
+  <rect x="60" y="1032" width="395" height="58" rx="16" class="consumer"/>
+  <text x="92" y="1056" class="label">Stewardship / Catalog Governance</text>
+  <text x="92" y="1078" class="tiny">remediation, product policy, ownership, listing fixes</text>
+  <path class="pink" d="M1510 969 C1180 1061 720 1061 455 1061"/>
+  <text x="520" y="1096" class="tiny">Feedback does not return to consumers; it creates governed stewardship, catalog-owner or domain-governance follow-up.</text>
 </svg>
 
