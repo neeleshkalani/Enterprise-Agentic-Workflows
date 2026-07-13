@@ -92,7 +92,7 @@ Catalog and marketplace should not be treated as the same thing.
 
 ## 4. End-to-end flow
 
-![Agentic Data Product Marketplace architecture](assets/data_product_marketplace_agentic_workflow.svg)
+![Agentic Data Product Marketplace architecture](assets/data_product_marketplace_agentic_workflow_v2.svg)
 
 > **How to read this visual:** the Data Stewardship Workbench creates governed products, the catalog stores approved evidence, the marketplace exposes certified products, and specialist Agents help consumers discover, compare, request and provide feedback under control-plane governance.
 
