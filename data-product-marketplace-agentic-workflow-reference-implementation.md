@@ -96,35 +96,33 @@ Catalog and marketplace should not be treated as the same thing.
 
 > **How to read this visual:** the Data Stewardship Workbench creates governed products, the catalog stores approved evidence, the marketplace exposes certified products, and specialist Agents help consumers discover, compare, request and provide feedback under control-plane governance.
 
-The full lifecycle has eight steps:
+The full lifecycle has eight numbered steps, also shown in the visual:
 
 1. **Onboard:** the Data Stewardship Workbench profiles, assesses, classifies, contracts and publishes a governed product.
-2. **Catalog:** the product metadata, schema, quality rules, classification, lineage references, contract and approvals are stored in the enterprise catalog.
+2. **Catalog:** product metadata, schema, quality rules, classification, lineage references, contract and approvals are stored in the enterprise catalog.
 3. **Certify:** marketplace readiness is evaluated using quality, ownership, classification, documentation, contract and approval criteria.
 4. **List:** certified products become discoverable through the marketplace.
-5. **Discover:** consumers use search, filters, recommendations or a conversational assistant.
+5. **Discover:** consumers use marketplace search, filters, recommendations or a conversational assistant.
 6. **Decide:** consumers inspect quality, lineage, sensitivity, allowed uses, access terms and usage examples.
 7. **Request:** access requests are checked against policy, routed for approval where needed and audited.
-8. **Feedback:** usage signals, ratings, issues and quality complaints route back into stewardship and may trigger remediation or re-certification.
+8. **Feedback:** usage signals, ratings, issues and quality complaints route back into stewardship, catalog ownership or domain governance.
 
 ---
 
 ## 5. Specialist marketplace Agents
 
-The reference implementation uses bounded specialist Agents rather than one broad marketplace Agent.
+The reference implementation uses bounded specialist Agents grouped into the same marketplace capability categories shown in the functional flow. This keeps the interview framing simple: Discovery, Recommendation and Curation are the headline categories, with access, lineage and feedback as governed supporting capabilities.
 
-| Agent | Primary responsibility | Receives | Produces | Cannot do |
-|---|---|---|---|---|
-| Discovery and Semantic Search Agent | Translate natural-language need into governed catalog queries | User query, role, domain, filters, catalog metadata | Search plan, ranked results, explanation | Grant access or certify products |
-| Intent Understanding Agent | Clarify what the consumer is trying to accomplish | Query, project context, consumer role | Interpreted intent, missing context questions, usage constraints | Invent product metadata |
-| Recommendation Agent | Suggest relevant and related products | Search results, usage patterns, consumer role, product similarity | Recommended products and rationale | Override quality or access policy |
-| Curation Agent | Maintain featured, certified and trending collections | Product quality signals, usage, steward flags, domain priorities | Curated collections, stale-product candidates | Publish products without certification |
-| Access Request Agent | Guide and structure access requests | Consumer identity, intended use, product policy, sensitivity | Access request package, routing recommendation | Approve restricted access unless policy explicitly allows automation |
-| Lineage Explanation Agent | Explain upstream and downstream dependencies | Lineage graph, source systems, transformations, consumers | Plain-language lineage narrative and impact summary | Change lineage records |
-| Quality Signal Agent | Summarize freshness, SLA, completeness, drift and issue trends | Quality history, contract, monitoring events | Trust summary, warnings, re-stewardship triggers | Hide failed quality signals |
-| Feedback Agent | Capture consumer feedback and route issues | Ratings, comments, issue reports, usage context | Feedback record, severity suggestion, steward action request | Close material issues without steward review |
+| Category | Specialist Agents | What they do | Cannot do |
+|---|---|---|---|
+| **Discovery** | Discovery and Semantic Search Agent; Intent Understanding Agent | Interpret the consumer's need, translate natural language into governed catalog queries and ask bounded clarification questions | Grant access, certify products or invent metadata |
+| **Recommendation** | Recommendation Agent; Quality Signal Agent | Rank relevant products using intent, role, certification, quality, freshness, sensitivity, usage and fit-for-purpose signals | Override quality facts, hide warnings or bypass access policy |
+| **Curation** | Curation Agent | Maintain featured, certified, domain-relevant and trending marketplace collections; identify stale or duplicate products | Publish products without certification or Human/domain-owner approval where required |
+| **Access, lineage and feedback** | Access Request Agent; Lineage Explanation Agent; Feedback Agent | Structure access requests, explain upstream/downstream trust evidence, capture feedback and route stewardship or catalog-improvement actions | Approve restricted access, change lineage records, or close material issues without steward, owner or governance review |
 
-These Agents can power both a traditional marketplace UI and a conversational search experience.
+Lineage is not treated as a sub-function of Recommendation. Recommendation can use lineage trust as one ranking signal, but the Lineage Explanation Agent has a separate responsibility: explaining source, transformation, dependency and impact evidence without inventing lineage.
+
+These Agents can power both a traditional marketplace UI and a conversational search experience. They reason over governed catalog evidence; they do not become the governance authority.
 
 ---
 
@@ -167,11 +165,18 @@ The assistant should:
 
 Both interaction models use the same governed tools and control plane.
 
+### Example discovery journeys
+
+| Domain | Example consumer need | How the marketplace Agents help |
+|---|---|---|
+| Legal Entity | "I need supplier legal-entity data for third-party risk analytics, refreshed monthly, with LEI and country coverage." | Discovery maps the need to Legal Entity products, Recommendation ranks certified products by completeness and freshness, Quality Signal explains LEI/country issues, Lineage explains source and downstream use, and Access Request prepares the approval package. |
+| Customer | "I need customer data for EMEA churn analysis, approved for analytics use, without exposing direct identifiers unless justified." | Intent Understanding clarifies region and use, Discovery searches Customer products, Recommendation prioritizes certified analytics-ready products, Quality Signal highlights completeness and recency, and Access Request applies sensitivity and allowed-use policy. |
+
 ---
 
 ## 7. Control-plane responsibilities
 
-The marketplace control plane must prevent discovery convenience from becoming governance bypass.
+The marketplace control plane must prevent discovery convenience from becoming governance bypass. Consumers normally interact with the Marketplace UI or Conversational Assistant; those experience surfaces call the control plane. The control plane mediates what the marketplace can show, what an Agent may see, and which governed tools may execute.
 
 It should own:
 
@@ -187,7 +192,7 @@ It should own:
 - model-attempt, cost and latency observability; and
 - escalation when confidence is low or policy is ambiguous.
 
-Agents should not directly query everything or execute every action. The control plane should decide what data each Agent may see and which tool calls it may request.
+Agents should not directly query everything or execute every action. The control plane should decide what data each Agent may see and which tool calls it may request. In other words, the control plane is not a consumer-facing chatbot; it is the authority layer behind the marketplace and assistant experiences.
 
 ---
 
@@ -335,7 +340,7 @@ The Lineage Explanation Agent should translate graph data into plain language, b
 
 ---
 
-## 13. Feedback loop back to stewardship
+## 13. Feedback loop back to stewardship and catalog governance
 
 Marketplace usage should improve stewardship.
 
@@ -351,7 +356,7 @@ Consumer feedback can create new stewardship work:
 - refresh frequency does not meet demand; or
 - a new use case requires a contract or policy update.
 
-The Feedback Agent should classify feedback, suggest severity and route it to the accountable steward. The control plane should decide whether the feedback creates:
+The Feedback Agent should classify feedback, suggest severity and route it to the accountable steward, product owner or catalog governance queue. Feedback goes back to the Data Stewardship Workbench when it requires data remediation, a new dataset version, product-policy review or contract change. Simpler documentation, ownership or marketplace-listing issues may route to catalog ownership or domain governance instead. The control plane should decide whether the feedback creates:
 
 - a documentation task;
 - a quality investigation;
@@ -364,14 +369,14 @@ The Feedback Agent should classify feedback, suggest severity and route it to th
 This completes the loop:
 
 ```text
-Discover -> Use -> Feedback -> Stewardship -> Improved Product -> Marketplace
+Discover -> Use -> Feedback -> Stewardship / Catalog Governance -> Improved Product -> Marketplace
 ```
 
 ---
 
-## 14. Current prototype versus marketplace extension
+## 14. Current Reference Implementation versus marketplace extension
 
-| Capability | Current Data Stewardship Workbench | Marketplace extension |
+| Capability | Current Data Stewardship Reference Implementation | Marketplace extension |
 |---|---|---|
 | Product onboarding | Implemented locally | Reused as upstream source |
 | Deterministic profiling | Implemented for CSV samples | Feeds quality/trust signals |
@@ -384,7 +389,7 @@ Discover -> Use -> Feedback -> Stewardship -> Improved Product -> Marketplace
 | Lineage explanation | Target-state only | Lineage Agent and Lineage MCP |
 | Consumer feedback | Not implemented | Feedback Agent and steward remediation loop |
 
-The current prototype does not need to become the marketplace UI. It can remain the governed producer-side Workbench. The marketplace can be a separate consumer-side application that consumes the cataloged outputs from the Workbench.
+The current reference implementation does not need to become the marketplace UI. It can remain the governed producer-side Workbench. The marketplace can be a separate consumer-side application that consumes the cataloged outputs from the Workbench.
 
 ---
 
@@ -469,4 +474,13 @@ The Data Stewardship Workbench proves how governed data products can be created.
 The architectural through-line is consistent:
 
 > Deterministic systems establish facts. Specialist Agents help people reason over those facts. The control plane governs authority, policy, tools, versions and evidence. Humans remain accountable for material data decisions.
+
+---
+
+## Further Reading
+
+- [Enterprise Agentic Workflows index](README.md)
+- [Data Stewardship Agentic Workflow Reference Implementation](data-stewardship-agentic-workflow-reference-implementation.md)
+- [Media Buying Agentic Workflow Reference Implementation](media-buying-agentic-workflow-reference-implementation.md)
+- [Role-Based Agentic Software Delivery Reference Implementation](role-based-agentic-software-delivery-reference-implementation.md)
 
