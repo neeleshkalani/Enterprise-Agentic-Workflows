@@ -63,8 +63,9 @@
 
   <rect x="390" y="520" width="260" height="105" rx="20" class="market"/>
   <circle cx="622" cy="542" r="18" class="stepGreen"/><text x="617" y="548" class="stepText">5</text>
-  <text x="425" y="565" class="label">Conversational assistant</text>
-  <text x="425" y="595" class="small">natural-language discovery</text>
+  <text x="425" y="558" class="label">Conversational</text>
+  <text x="425" y="582" class="label">assistant</text>
+  <text x="425" y="608" class="small">natural-language discovery</text>
 
   <rect x="720" y="415" width="260" height="130" rx="24" class="market"/>
   <circle cx="952" cy="437" r="18" class="stepGreen"/><text x="947" y="443" class="stepText">6</text>
@@ -151,10 +152,11 @@
   <path class="flow" d="M1348 885 L1348 930"/>
   <path class="flow" d="M1595 885 L1595 930"/>
 
-  <rect x="1455" y="1032" width="355" height="58" rx="16" class="consumer"/>
-  <text x="1485" y="1056" class="label">Stewardship / Catalog Governance</text>
-  <text x="1485" y="1078" class="tiny">remediation, ownership, listing fixes</text>
-  <path class="pink" d="M1638 1008 L1638 1032"/>
+  <rect x="1425" y="1028" width="385" height="70" rx="16" class="consumer"/>
+  <text x="1455" y="1052" class="label">Stewardship Workbench</text>
+  <text x="1455" y="1076" class="label">Catalog Governance</text>
+  <text x="1455" y="1092" class="tiny">remediation, ownership, listing fixes</text>
+  <path class="pink" d="M1638 1008 L1638 1028"/>
   <text x="1020" y="1098" class="tiny">Feedback creates governed stewardship, catalog-owner or domain-governance follow-up.</text>
 </svg>
 
