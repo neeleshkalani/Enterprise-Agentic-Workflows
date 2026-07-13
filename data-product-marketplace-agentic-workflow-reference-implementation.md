@@ -14,6 +14,38 @@ This reference implementation describes a platform-agnostic operating model for 
 
 The reference implementation remains vendor-neutral. The enterprise catalog and marketplace could be implemented using Microsoft Purview, Microsoft Fabric, Databricks Unity Catalog, Collibra, Alation, Informatica or a custom enterprise data-product portal. The important architectural idea is the governed agentic layer above the catalog, not the specific vendor product underneath.
 
+## Table of contents
+
+- [Executive summary](#executive-summary)
+- [1. Relationship to the Data Stewardship Workbench](#1-relationship-to-the-data-stewardship-workbench)
+- [2. Functional problem](#2-functional-problem)
+- [3. Target operating model](#3-target-operating-model)
+  - [Versioning and lifecycle management](#versioning-and-lifecycle-management)
+- [4. End-to-end flow](#4-end-to-end-flow)
+- [5. Specialist marketplace Agents](#5-specialist-marketplace-agents)
+- [6. Two consumer interaction models](#6-two-consumer-interaction-models)
+- [7. Control-plane responsibilities](#7-control-plane-responsibilities)
+- [8. MCP and governed tool boundary](#8-mcp-and-governed-tool-boundary)
+- [9. Search and recommendation design](#9-search-and-recommendation-design)
+- [10. Certification and marketplace listing](#10-certification-and-marketplace-listing)
+- [11. Access request and entitlement flow](#11-access-request-and-entitlement-flow)
+- [12. Lineage and trust signals](#12-lineage-and-trust-signals)
+- [13. Feedback loop back to stewardship and catalog governance](#13-feedback-loop-back-to-stewardship-and-catalog-governance)
+- [14. Current Reference Implementation versus marketplace extension](#14-current-reference-implementation-versus-marketplace-extension)
+- [15. Enterprise target state](#15-enterprise-target-state)
+- [16. Evaluation approach](#16-evaluation-approach)
+- [17. Possible demonstration storyboard](#17-possible-demonstration-storyboard)
+- [18. Reference implementation takeaway](#18-reference-implementation-takeaway)
+- [Further Reading](#further-reading)
+
+---
+
+## Executive summary
+
+This reference implementation extends the Data Stewardship Workbench into an agentic data-product marketplace. It shows how governed products created during onboarding can be certified, listed, discovered, compared, accessed and reused through a marketplace experience. The operating model separates cataloging, certification, marketplace listing and consumer guidance while keeping the control plane authoritative over policy, approvals, tool execution and audit.
+
+The design centers on three core marketplace capabilities: discovery, recommendation and curation. Specialist Agents help consumers find relevant products, understand quality and lineage, request access and provide feedback. The marketplace supports both traditional UI browsing and conversational discovery, while versioning and lifecycle management preserve compatibility as products evolve.
+
 ---
 
 ## 1. Relationship to the Data Stewardship Workbench
@@ -80,6 +112,10 @@ The target operating model separates cataloging, marketplace listing and consume
 | Data Product Marketplace | Presents certified products for discovery, comparison, access and reuse |
 | Agentic discovery layer | Helps consumers search, reason, compare, request and provide feedback |
 | Control plane | Enforces policy, approvals, tool permissions, evidence, limits and audit |
+
+### Versioning and lifecycle management
+
+> The operating model also supports controlled product evolution. Data products evolve over time as schemas, business definitions, quality rules and governance policies change. The marketplace exposes multiple product versions while preserving compatibility for existing consumers. New versions can be published alongside existing ones, with consumers receiving visibility into available upgrades, compatibility considerations and planned deprecation timelines. This enables controlled evolution of data products without disrupting downstream applications, analytics or AI agents.
 
 Catalog and marketplace should not be treated as the same thing.
 
