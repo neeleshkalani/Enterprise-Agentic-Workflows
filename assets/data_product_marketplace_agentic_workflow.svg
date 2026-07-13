@@ -41,9 +41,9 @@
 
   <rect x="1050" y="195" width="260" height="120" rx="22" class="market"/>
   <circle cx="1282" cy="215" r="18" class="stepGreen"/><text x="1277" y="221" class="stepText">4</text>
-  <text x="1085" y="245" class="label">List in marketplace</text>
-  <text x="1085" y="274" class="small">certified products only</text>
-  <text x="1085" y="298" class="tiny">not every catalog asset</text>
+  <text x="1085" y="245" class="label">Data Product Marketplace</text>
+  <text x="1085" y="274" class="small">certified products listed</text>
+  <text x="1085" y="298" class="tiny">search, compare, request</text>
 
   <path class="flow" d="M320 255 L390 255"/>
   <path class="flow" d="M650 255 L720 255"/>
