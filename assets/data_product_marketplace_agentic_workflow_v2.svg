@@ -88,9 +88,8 @@
   <path class="dash" d="M1180 315 L1180 415"/>
 
   <rect x="1380" y="190" width="430" height="438" rx="28" class="agent"/>
-  <text x="1415" y="232" class="label">Grouped Marketplace Agents</text>
-  <text x="1415" y="260" class="tiny">headline categories from the interview answer</text>
-
+  <text x="1415" y="232" class="label">Specialist Marketplace Agents</text>
+  
   <rect x="1415" y="285" width="360" height="62" rx="16" fill="#ffedd5" stroke="#fb923c" stroke-width="1.8"/>
   <text x="1440" y="310" class="catTitle">Discovery</text>
   <text x="1440" y="333" class="catText">Semantic Search + Intent Understanding</text>
