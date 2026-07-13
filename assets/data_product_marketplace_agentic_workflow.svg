@@ -153,9 +153,9 @@
   <path class="flow" d="M1595 885 L1595 930"/>
 
   <rect x="1425" y="1028" width="385" height="70" rx="16" class="consumer"/>
-  <text x="1455" y="1052" class="label">Stewardship Workbench</text>
-  <text x="1455" y="1076" class="label">Catalog Governance</text>
-  <text x="1455" y="1092" class="tiny">remediation, ownership, listing fixes</text>
+  <text x="1618" y="1052" class="label" text-anchor="middle">Stewardship Workbench</text>
+  <text x="1618" y="1076" class="label" text-anchor="middle">Catalog Governance</text>
+  <text x="1618" y="1092" class="tiny" text-anchor="middle">remediation, ownership, listing fixes</text>
   <path class="pink" d="M1638 1008 L1638 1028"/>
   <text x="1020" y="1098" class="tiny">Feedback creates governed stewardship, catalog-owner or domain-governance follow-up.</text>
 </svg>
